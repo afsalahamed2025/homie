@@ -15,7 +15,7 @@ import {format} from 'date-fns';
 import {ScrollView, TextInput} from 'react-native-gesture-handler';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import {moderatescale, verticalscale} from './Responsive';
+import {Commonheight, Commonwidth} from './Responsive';
 
 const RegisterTicket = () => {
   const [Contract, setContract] = useState('');
@@ -810,40 +810,61 @@ Locality state kulla save pannudhu */
   };
   return (
     <SafeAreaView>
-      <ScrollView style=
-      {{backgroundColor:'red'}}>
-        <View style={{backgroundColor: 'white'}}>
-          <View
-            style={{
-              backgroundColor: '#ffffff',
-              // padding: 10,
-              width: '96%',
-              alignItems: 'center',
-              justifyContent: 'center',
-              alignSelf: 'center',
-              // height:1150
-            }}>
-            {/*  */}
+      <ScrollView >
+        <View
+          style={{
+            width: '100%',
+            alignItems: 'center',
+            alignSelf: 'center',
+            justifyContent: 'center',
+            flex: 1,
+          backgroundColor:'#ffffff',
+          }}>
             <View
               style={{
                 width: '100%',
                 height: 50,
-                alignSelf: 'center',
+                backgroundColor: '#007aff',
+                flexDirection: 'row',
+                alignItems: 'center',
                 justifyContent: 'center',
-                elevation: 10,
-                backgroundColor: '#ffffff',
+                alignSelf: 'center',
               }}>
-              <View
+              <Text
                 style={{
-                  width: '100%',
-                  height: 40,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  paddingHorizontal: 10,
+                  color: 'white',
+                  textAlign: 'center',
+                  fontWeight: '600',
                 }}>
-                <Text
-                  style={{fontSize: 16, fontWeight: '500', color: '#0091ff'}}>
+                Register Ticket
+              </Text>
+            </View>
+          <View
+            style={{
+              width: '100%',
+              // height: 60,
+              alignSelf: 'center',
+              justifyContent: 'center',
+              alignItems: 'center',
+              elevation:2,
+              backgroundColor:'#ffffff',
+ 
+            }}>
+            
+            <View
+              style={{
+                width: '100%',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                 paddingHorizontal: 10,
+                height:70,
+                backgroundColor:'#ffffff',
+              borderBottomWidth:1,
+              borderBottomColor:"#c8c3c3",
+              }}>
+                  <Text
+                  style={{fontSize: 12, fontWeight: '400', color: '#007aff'}}>
                   Primary Details
                 </Text>
 
@@ -851,27 +872,27 @@ Locality state kulla save pannudhu */
                   <MaterialIcons name="attachment" size={25} color="black" />
                   <Text
                     style={{
-                      fontSize: 16,
+                      fontSize: 12,
                       fontWeight: '500',
                       color: '#000000',
                       marginLeft: 5,
                     }}>
-                    Attachments [0/5]
+                    Attachments (0/5)
                   </Text>
                 </View>
-              </View>
-            </View>
 
-            {/* Complaint No date and Time */}
+              </View>
             <View
               style={{
-                width: '100%',
+                width: '95%',
                 height: 40,
                 flexDirection: 'row',
                 justifyContent: 'space-around',
+                backgroundColor:'#ffffff',
                 alignItems: 'center',
                 alignSelf: 'center',
                 marginTop: 10,
+               
               }}>
               <View
                 style={{
@@ -909,14 +930,10 @@ Locality state kulla save pannudhu */
               </View>
             </View>
 
-            {/* Top Select Complaint Type */}
-            <View
+              <View
               style={{
-                width: '100%',
-                // height:500,
+                width: '95%',          
                 marginTop: 20,
-                elevation: 10,
-
                 alignItems: 'center',
                 justifyContent: 'center',
                 alignSelf: 'center',
@@ -942,14 +959,15 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left:  Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Complaint
+                  Complaint  <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
+
                 <View
                   style={{
                     width: '90%',
@@ -961,6 +979,7 @@ Locality state kulla save pannudhu */
                     style={{
                       alignSelf: 'flex-start',
                       color: 'black',
+                      fontWeight:'500'
                     }}>
                     {Complaint ? Complaint : 'Select Complaint Type'}
                   </Text>
@@ -969,7 +988,7 @@ Locality state kulla save pannudhu */
                   style={{
                     width: 1,
                     height: 40,
-                    backgroundColor: '#d0cdcd',
+                    backgroundColor: '#ffffff',
                     fontSize: '16',
                     fontWeight: '100',
                     justifyContent: 'center',
@@ -1014,9 +1033,10 @@ Locality state kulla save pannudhu */
               <View style={{height: 20}} />
             </View>
 
-            {/*  Complainer Details Title */}
+          </View>
 
-            <View
+          <View style={{width:"100%",justifyContent:'center',alignItems:'center',justifyContent:'center'}}>
+                  <View
               style={{
                 width: '100%',
                 height: 40,
@@ -1027,16 +1047,17 @@ Locality state kulla save pannudhu */
               <Text
                 style={{
                   width: '100%',
-                  fontSize: 16,
+                  fontSize: 14,
                   fontWeight: '500',
                   color: '#0073ff',
                   borderBottomWidth: 1,
-                  borderBottomColor: '#d7d3d3',
+                  paddingHorizontal:10,
+                  borderBottomColor: '#e8e5e5',
                 }}>
                 Complainer Details
               </Text>
             </View>
-            {/* Top COMPLANT FIELDS */}
+
 
             <View
               style={{
@@ -1044,13 +1065,14 @@ Locality state kulla save pannudhu */
                 // height:500,
                 marginTop: 20,
                 elevation: 2,
+                paddingHorizontal:10,
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
                 alignSelf: 'center',
                 backgroundColor: '#ffffff',
               }}>
-              <TouchableOpacity
+              <TouchableOpacity 
                 onPress={() => {
                   setContractbtmsheet(true);
                   Saved_Data();
@@ -1070,13 +1092,13 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left: Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Contract
+                  Contract <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
                 <View
                   style={{
@@ -1088,7 +1110,9 @@ Locality state kulla save pannudhu */
                   <Text
                     style={{
                       alignSelf: 'flex-start',
-                      color: 'black',
+                      color: '#464545',
+                       fontWeight:'500',
+                      fontSize:14
                     }}>
                     {Contract ? Contract : 'Select Contract'}
                   </Text>
@@ -1159,13 +1183,13 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left: Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Location
+                  Location <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
                 <View
                   style={{
@@ -1177,7 +1201,9 @@ Locality state kulla save pannudhu */
                   <Text
                     style={{
                       alignSelf: 'flex-start',
-                      color: 'black',
+                       color: '#464545',
+                       fontWeight:'500',
+                      fontSize:14
                     }}>
                     {Locality ? Locality : 'Select Locality'}
                   </Text>
@@ -1248,13 +1274,13 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left: Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Building
+                  Building  <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
                 <View
                   style={{
@@ -1266,7 +1292,9 @@ Locality state kulla save pannudhu */
                   <Text
                     style={{
                       alignSelf: 'flex-start',
-                      color: 'black',
+                      color: '#464545',
+                       fontWeight:'500',
+                      fontSize:14
                     }}>
                     {Building ? Building : 'Select Building'}
                   </Text>
@@ -1337,13 +1365,13 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left: Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Floor
+                  Floor <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
                 <View
                   style={{
@@ -1355,7 +1383,9 @@ Locality state kulla save pannudhu */
                   <Text
                     style={{
                       alignSelf: 'flex-start',
-                      color: 'black',
+                    color: '#464545',
+                       fontWeight:'500',
+                      fontSize:14
                     }}>
                     {Floor ? Floor : 'Select Floor'}
                   </Text>
@@ -1426,13 +1456,13 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left: Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Spot
+                  Spot <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
                 <View
                   style={{
@@ -1444,7 +1474,9 @@ Locality state kulla save pannudhu */
                   <Text
                     style={{
                       alignSelf: 'flex-start',
-                      color: 'black',
+                         color: '#464545',
+                       fontWeight:'500',
+                      fontSize:14
                     }}>
                     {Spot ? Spot : 'Select Spot'}
                   </Text>
@@ -1511,13 +1543,13 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left: Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Service
+                  Service  <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
                 <View
                   style={{
@@ -1529,7 +1561,9 @@ Locality state kulla save pannudhu */
                   <Text
                     style={{
                       alignSelf: 'flex-start',
-                      color: 'black',
+                       color: '#464545',
+                       fontWeight:'500',
+                      fontSize:14
                     }}>
                     {Service ? Service : 'Select Service'}
                   </Text>
@@ -1583,9 +1617,13 @@ Locality state kulla save pannudhu */
               <View style={{height: 20}} />
             </View>
 
-            {/* DOWN  Complainer  Title */}
+            
+          </View>
 
+{/* DOWN FIELDS */}
             <View
+          style={{width:"95%",justifyContent:'center',alignItems:'center',justifyContent:'center'}}>
+                <View
               style={{
                 width: '100%',
                 height: 40,
@@ -1596,19 +1634,17 @@ Locality state kulla save pannudhu */
               <Text
                 style={{
                   width: '100%',
-                  fontSize: 16,
+                  fontSize: 14,
                   fontWeight: '500',
                   color: '#0073ff',
+                    paddingHorizontal:10,
                   borderBottomWidth: 1,
                   borderBottomColor: '#d7d3d3',
                 }}>
                 Complainer Details
               </Text>
-            </View>
-
-            {/* DOWN COMPLANT FIELDS */}
-
-            <View
+               </View>
+              <View
               style={{
                 width: '100%',
                 // height:500,
@@ -1617,7 +1653,7 @@ Locality state kulla save pannudhu */
                 alignItems: 'center',
                 justifyContent: 'center',
                 alignSelf: 'center',
-                elevation: 2,
+              
                 backgroundColor: '#ffffff',
               }}>
               <TouchableOpacity
@@ -1639,13 +1675,13 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left: Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Nature Of Complaint
+                  Nature Of Complaint <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
                 <View
                   style={{
@@ -1657,7 +1693,9 @@ Locality state kulla save pannudhu */
                   <Text
                     style={{
                       alignSelf: 'flex-start',
-                      color: 'black',
+                      color: '#464545',
+                       fontWeight:'500',
+                      fontSize:14
                     }}>
                     {Natural ? Natural : 'Select Natural'}
                   </Text>
@@ -1729,13 +1767,13 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left: Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Division
+                  Division <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
                 <View
                   style={{
@@ -1747,7 +1785,9 @@ Locality state kulla save pannudhu */
                   <Text
                     style={{
                       alignSelf: 'flex-start',
-                      color: 'black',
+                       color: '#464545',
+                       fontWeight:'500',
+                      fontSize:14
                     }}>
                     {Division ? Division : 'Select Division'}
                   </Text>
@@ -1819,13 +1859,13 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left: Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Priority
+                  Priority  <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
                 <View
                   style={{
@@ -1837,7 +1877,9 @@ Locality state kulla save pannudhu */
                   <Text
                     style={{
                       alignSelf: 'flex-start',
-                      color: 'black',
+                        color: '#464545',
+                       fontWeight:'500',
+                      fontSize:14
                     }}>
                     {Priority ? Priority : 'Select Priority'}
                   </Text>
@@ -1908,13 +1950,13 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left: Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Discipline
+                  Discipline <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
                 <View
                   style={{
@@ -1926,7 +1968,9 @@ Locality state kulla save pannudhu */
                   <Text
                     style={{
                       alignSelf: 'flex-start',
-                      color: 'black',
+                        color: '#464545',
+                       fontWeight:'500',
+                      fontSize:14
                     }}>
                     {Discipline ? Discipline : 'Select Discipline'}
                   </Text>
@@ -1997,13 +2041,13 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left: Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Description
+                  Description <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
 
                 <View
@@ -2086,13 +2130,13 @@ Locality state kulla save pannudhu */
                 <Text
                   style={{
                     position: 'absolute',
-                    left: moderatescale(14),
-                    top: verticalscale(-9),
+                    left: Commonheight(14),
+                    top: Commonwidth(-9),
                     backgroundColor: '#ffffff',
                     color: '#0073ff',
                     zIndex: 2,
                   }}>
-                  Workorder No
+                  Workorder No <Text style={{color:'#f96060'}}>*</Text>
                 </Text>
 
                 <View
@@ -2193,8 +2237,18 @@ Locality state kulla save pannudhu */
                 </View>
               </View>
             </View>
+            </View>
 
-            {/* MODAL BOXING  ALL */}
+
+
+
+
+
+
+
+
+
+
 
             {/* CONTRACT  */}
             <Modal
@@ -3537,18 +3591,39 @@ Locality state kulla save pannudhu */
               </View>
             </Modal>
 
-            {/* BUTTON */}
-            <View
-              style={{
-                width: '90%',
-                height: 40,
-                justifyContent: 'center',
-                alignSelf: 'center',
-                marginTop: 20,
-              }}>
-              <Button title="Submit" onPress={handlePress} />
-            </View>
-          </View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </View>
+
+        {/* Button */}
+        <View style={{flex: 1, backgroundColor: 'white'}}>
+          <View></View>
         </View>
       </ScrollView>
     </SafeAreaView>

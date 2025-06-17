@@ -14,14 +14,13 @@ import BottomSheetcopy from './BottomSheet copy';
 // import Async_Methud from './Async_Methud';
 
 const Stack = createStackNavigator();
-
 const Navigationfiles = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator >
         {/* <Stack.Screen name="Profile" component={Profile} /> */}
         {/* <Stack.Screen name="Main" component={Main} /> */}
-        <Stack.Screen name="Login" component={Login}  c />
+        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}  />
         {/* <Stack.Screen name="Lists" component={Lists} /> */}
         <Stack.Screen name="Home" component={Home}  options={{ headerShown: false }} />
         {/* <Stack.Screen name="Design" component={Design_Pages} /> */}

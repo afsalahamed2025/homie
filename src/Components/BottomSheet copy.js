@@ -10,7 +10,6 @@ async function getUserData(userKey) {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     });
-
     // Response error check pannuvom
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

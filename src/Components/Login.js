@@ -9,6 +9,7 @@ import {
   Alert,
   TouchableOpacity,
   ImageBackground,
+  ScrollView,
 
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -22,7 +23,8 @@ import StylishPopup from './StylishPopup';
 import nano_logo from '../assets/image/bottomright_logo.png'
 export default function Login({navigation}) {
   const [username, setusername] = useState('');
-  const [password, setpassword] = useState('');
+ const [password, setpassword] = useState('');
+
     const [popupVisible, setPopupVisible] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
   const [popupTitle, setPopupTitle] = useState('');
@@ -119,7 +121,7 @@ export default function Login({navigation}) {
     }
   };
   return (
-
+<ScrollView>
     <View style={styles.container}>
       <View
         style={{
@@ -237,7 +239,7 @@ export default function Login({navigation}) {
               alignItems: 'center',
               paddingVertical: 4,
             }}>
-            <TextInput onChangeText={setpassword}  secureTextEntry={true}
+            <TextInput onChangeText={setpassword}  value={password} secureTextEntry={true}
               placeholder="Password"
               placeholderTextColor="#cac8c8"
               style={{fontSize: 15, color: '#000000'}}
@@ -319,6 +321,7 @@ export default function Login({navigation}) {
         onClose={() => setPopupVisible(false)}
       />
     </View>
+    </ScrollView>
 
   );
 }
