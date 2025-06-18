@@ -40,7 +40,7 @@ export default function Home({navigation}) {
   //     duration: 300,
   //     useNativeDriver: false,
   //   }).start();
-  // };
+  // };   
 
   // const closeMenu = () => {
   //   Animated.timing(slideAnim, {
@@ -191,6 +191,7 @@ export default function Home({navigation}) {
             padding: 10,
             marginTop: 20,
           }}>
+            
           <View
             style={{
               width: '60%',
@@ -361,10 +362,10 @@ export default function Home({navigation}) {
           backgroundColor:'white',
             justifyContent: 'space-between',
           }}>
-          <View style={{ width:responsiveWidth(40), alignItems: 'center'}}>
+          <TouchableOpacity onPress={()=>{navigation.navigate("BottomSheet")}} style={{ width:responsiveWidth(40), justifyContent:'center',alignItems:'center',alignSelf:'center'}} >
             <Icon name="file-medical" size={20} color="#807d7d" />
             <Text  style={{textAlign: 'center',color:'#000000',fontSize:12,}}>Complaints</Text>
-          </View>
+          </TouchableOpacity>
           <View style={{width:responsiveWidth(20), alignItems: 'center'}}>
             <Image
               style={{width: 60, height: 60, color: 'gray'}}
@@ -394,12 +395,9 @@ const ModuleBox = ({label, count, navigation, image}) => {
   <TouchableOpacity
     onPress={() => {
       if (label === 'Workorder') {
-        console.log('Yes, this is Workorder — go to Break screen');
-        navigation.navigate('Break');
-      } else if (label === 'Facility Auding Maintenance') {
-        console.log('Not Workorder — go to Bottom screen');
-        navigation.navigate('BottomSheet');
-      } else if (label === 'House Keeping Maintenance') {
+        console.log('Yes, this is Workorder — go to Work screen');
+        navigation.navigate('Workorder');
+      }  else if (label === 'House Keeping Maintenance') {
         console.log('House Keeping Page');
         navigation.navigate('BottomSheetcopy');
       } else {

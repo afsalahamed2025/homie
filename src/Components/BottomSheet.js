@@ -15,9 +15,11 @@ import {format} from 'date-fns';
 import {ScrollView, TextInput} from 'react-native-gesture-handler';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import {Commonheight, Commonwidth} from './Responsive';
-
-const RegisterTicket = () => {
+import {responsiveWidth,} from './Responsive';
+import Home from './Home';
+const RegisterTicket = ({navigation}) => {
   const [Contract, setContract] = useState('');
   const [Contractidpk, setContractidpk] = useState('');
   const [Contractbtmsheet, setContractbtmsheet] = useState(false);
@@ -81,11 +83,8 @@ const RegisterTicket = () => {
   // const [ClientData, setClientData] = useState([]);
   const [Clientbtmsheet, setClientbtmsheet] = useState([]);
   const [Client, setClient] = useState('');
-
   const [searchText, setSearchText] = useState('');
-
   const [complaintassetdata, setComplaintAssetData] = useState([]);
-
   // const [UserID, setUserID] = useState(null);
 
   // useEffect(() => {
@@ -102,7 +101,6 @@ const RegisterTicket = () => {
 
   //   fetchUserID();
   // }, []);
-
   const filteredData = DisciplineData.filter(item =>
     item.DisciplineName.toLowerCase().includes(searchText.toLowerCase()),
   );
@@ -809,8 +807,197 @@ Locality state kulla save pannudhu */
     }
   };
   return (
-    <SafeAreaView>
-      <ScrollView >
+    <SafeAreaView style={{ flex: 1,
+    width: responsiveWidth(100),}}>
+     
+     {/* Modal */}
+   {Contractbtmsheet && (
+          <View style={{
+            position:'absolute',
+            top:0,
+        
+            bottom:0,
+            left:0,
+            right:0,
+            backgroundColor:'rgba(0,0,0,0.5)',
+            zIndex:1
+          }}/>
+
+          
+          
+         ) }
+   {Localitybtmsheet &&  (
+          <View style={{
+            position:'absolute',
+            top:0,
+        
+            bottom:0,
+            left:0,
+            right:0,
+            backgroundColor:'rgba(0,0,0,0.5)',
+            zIndex:1
+          }}/>
+
+          
+          
+         ) }
+   { Prioritybtmsheet &&  (
+          <View style={{
+            position:'absolute',
+            top:0,
+        
+            bottom:0,
+            left:0,
+            right:0,
+            backgroundColor:'rgba(0,0,0,0.5)',
+            zIndex:1
+          }}/>
+
+          
+          
+         ) }
+   { Disciplinebtmsheet &&  (
+          <View style={{
+            position:'absolute',
+            top:0,
+        
+            bottom:0,
+            left:0,
+            right:0,
+            backgroundColor:'rgba(0,0,0,0.5)',
+            zIndex:1
+          }}/>
+
+          
+          
+         ) }
+   { Divisionbtmsheet &&  (
+          <View style={{
+            position:'absolute',
+            top:0,
+        
+            bottom:0,
+            left:0,
+            right:0,
+            backgroundColor:'rgba(0,0,0,0.5)',
+            zIndex:1
+          }}/>
+         
+         ) }
+   { Naturalbtmsheet &&  (
+          <View style={{
+            position:'absolute',
+            top:0,
+        
+            bottom:0,
+            left:0,
+            right:0,
+            backgroundColor:'rgba(0,0,0,0.5)',
+            zIndex:1
+          }}/>
+
+          
+          
+         ) }
+  { Floorbtmsheet &&  (
+          <View style={{
+            position:'absolute',
+            top:0,
+        
+            bottom:0,
+            left:0,
+            right:0,
+            backgroundColor:'rgba(0,0,0,0.5)',
+            zIndex:1
+          }}/>
+
+          
+          
+         ) }
+  { Spotbtmsheet &&  (
+          <View style={{
+            position:'absolute',
+            top:0,
+        
+            bottom:0,
+            left:0,
+            right:0,
+            backgroundColor:'rgba(0,0,0,0.5)',
+            zIndex:1
+          }}/>
+
+          
+          
+         ) }   
+ { Complaintbtmsheet &&  (
+          <View style={{
+            position:'absolute',
+            top:0,
+        
+            bottom:0,
+            left:0,
+            right:0,
+            backgroundColor:'rgba(0,0,0,0.5)',
+            zIndex:1
+          }}/>
+
+          
+          
+         ) }
+{ Servicebtmsheet &&  (
+          <View style={{
+            position:'absolute',
+            top:0,
+        
+            bottom:0,
+            left:0,
+            right:0,
+            backgroundColor:'rgba(0,0,0,0.5)',
+            zIndex:1
+          }}/>
+
+          
+          
+         ) }
+     <View
+  style={{
+    width: '100%',
+    height: 50,
+    backgroundColor: '#007aff',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between', 
+    paddingHorizontal: 15,
+
+  }}
+>
+  <TouchableOpacity onPress={()=>{navigation.navigate("Home")}} style={{ width:'5%' ,justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
+    <Icon name="angle-left" size={20} color="#ffffff" />
+  </TouchableOpacity>
+
+
+
+  <View style={{ width:'95%',justifyContent:'center',alignSelf:'center',alignItems:'center'}}>
+  <Text
+    style={{
+      color: '#ffffff',
+      fontWeight: '600',
+      fontSize: 18,
+    
+      textAlign: 'center',
+    }}
+  >
+    Register Ticket
+  </Text>
+  </View>
+
+
+
+
+     </View>
+
+
+      <ScrollView   contentContainerStyle={{ flexGrow: 1 }}>
         <View
           style={{
             width: '100%',
@@ -820,25 +1007,7 @@ Locality state kulla save pannudhu */
             flex: 1,
           backgroundColor:'#ffffff',
           }}>
-            <View
-              style={{
-                width: '100%',
-                height: 50,
-                backgroundColor: '#007aff',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text
-                style={{
-                  color: 'white',
-                  textAlign: 'center',
-                  fontWeight: '600',
-                }}>
-                Register Ticket
-              </Text>
-            </View>
+            
           <View
             style={{
               width: '100%',
@@ -882,6 +1051,7 @@ Locality state kulla save pannudhu */
                 </View>
 
               </View>
+
             <View
               style={{
                 width: '95%',
@@ -981,7 +1151,7 @@ Locality state kulla save pannudhu */
                       color: 'black',
                       fontWeight:'500'
                     }}>
-                    {Complaint ? Complaint : 'Select Complaint Type'}
+                    {Complaint ? Complaint : 'Select Complaint Type'} <Text>*</Text>
                   </Text>
                 </View>
                 <View
@@ -1025,17 +1195,14 @@ Locality state kulla save pannudhu */
                           ? 'caretup'
                           : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
               </TouchableOpacity>
               <View style={{height: 20}} />
             </View>
-
-          </View>
-
-          <View style={{width:"100%",justifyContent:'center',alignItems:'center',justifyContent:'center'}}>
+           <View style={{width:"100%",justifyContent:'center',alignItems:'center',justifyContent:'center'}}>
                   <View
               style={{
                 width: '100%',
@@ -1114,7 +1281,7 @@ Locality state kulla save pannudhu */
                        fontWeight:'500',
                       fontSize:14
                     }}>
-                    {Contract ? Contract : 'Select Contract'}
+                    {Contract ? Contract : 'Select Contract'} <Text>*</Text>
                   </Text>
                 </View>
                 <View
@@ -1158,7 +1325,7 @@ Locality state kulla save pannudhu */
                           ? 'caretup'
                           : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
@@ -1205,7 +1372,7 @@ Locality state kulla save pannudhu */
                        fontWeight:'500',
                       fontSize:14
                     }}>
-                    {Locality ? Locality : 'Select Locality'}
+                    {Locality ? Locality : 'Select Locality'} <Text>*</Text>
                   </Text>
                 </View>
                 <View
@@ -1249,7 +1416,7 @@ Locality state kulla save pannudhu */
                           ? 'caretup'
                           : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
@@ -1296,7 +1463,7 @@ Locality state kulla save pannudhu */
                        fontWeight:'500',
                       fontSize:14
                     }}>
-                    {Building ? Building : 'Select Building'}
+                    {Building ? Building : 'Select Building'} <Text>*</Text>
                   </Text>
                 </View>
                 <View
@@ -1340,7 +1507,7 @@ Locality state kulla save pannudhu */
                           ? 'caretup'
                           : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
@@ -1387,7 +1554,7 @@ Locality state kulla save pannudhu */
                        fontWeight:'500',
                       fontSize:14
                     }}>
-                    {Floor ? Floor : 'Select Floor'}
+                    {Floor ? Floor : 'Select Floor'} 
                   </Text>
                 </View>
                 <View
@@ -1431,7 +1598,7 @@ Locality state kulla save pannudhu */
                           ? 'caretup'
                           : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
@@ -1478,7 +1645,7 @@ Locality state kulla save pannudhu */
                        fontWeight:'500',
                       fontSize:14
                     }}>
-                    {Spot ? Spot : 'Select Spot'}
+                    {Spot ? Spot : 'Select Spot'} 
                   </Text>
                 </View>
                 <View
@@ -1518,7 +1685,7 @@ Locality state kulla save pannudhu */
                       name={
                         Spot ? 'close' : Spotbtmsheet ? 'caretup' : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
@@ -1565,7 +1732,7 @@ Locality state kulla save pannudhu */
                        fontWeight:'500',
                       fontSize:14
                     }}>
-                    {Service ? Service : 'Select Service'}
+                    {Service ? Service : 'Select Service'} <Text>*</Text>
                   </Text>
                 </View>
                 <View
@@ -1609,7 +1776,7 @@ Locality state kulla save pannudhu */
                           ? 'caretup'
                           : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
@@ -1619,10 +1786,12 @@ Locality state kulla save pannudhu */
 
             
           </View>
+          </View>
 
 {/* DOWN FIELDS */}
             <View
-          style={{width:"95%",justifyContent:'center',alignItems:'center',justifyContent:'center'}}>
+          style={{width:"100%",justifyContent:'center',alignItems:'center',justifyContent:'center',  elevation:5,
+                  backgroundColor:'#ffffff',}}>
                 <View
               style={{
                 width: '100%',
@@ -1634,6 +1803,8 @@ Locality state kulla save pannudhu */
               <Text
                 style={{
                   width: '100%',
+                  alignItems:'center',
+                  justifyContent:'center',
                   fontSize: 14,
                   fontWeight: '500',
                   color: '#0073ff',
@@ -1646,9 +1817,9 @@ Locality state kulla save pannudhu */
                </View>
               <View
               style={{
-                width: '100%',
+                width: '95%',
                 // height:500,
-                marginTop: 25,
+         marginTop: 20,
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -1697,7 +1868,7 @@ Locality state kulla save pannudhu */
                        fontWeight:'500',
                       fontSize:14
                     }}>
-                    {Natural ? Natural : 'Select Natural'}
+                    {Natural ? Natural : 'Select Natural'} <Text>*</Text>
                   </Text>
                 </View>
                 <View
@@ -1742,7 +1913,7 @@ Locality state kulla save pannudhu */
                           ? 'caretup'
                           : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
@@ -1789,7 +1960,7 @@ Locality state kulla save pannudhu */
                        fontWeight:'500',
                       fontSize:14
                     }}>
-                    {Division ? Division : 'Select Division'}
+                    {Division ? Division : 'Select Division'} <Text>*</Text>
                   </Text>
                 </View>
                 <View
@@ -1833,7 +2004,7 @@ Locality state kulla save pannudhu */
                           ? 'caretup'
                           : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
@@ -1881,8 +2052,8 @@ Locality state kulla save pannudhu */
                        fontWeight:'500',
                       fontSize:14
                     }}>
-                    {Priority ? Priority : 'Select Priority'}
-                  </Text>
+                    {Priority ? Priority : 'Select Priority'} <Text>*</Text>
+                    </Text>
                 </View>
                 <View
                   style={{
@@ -1925,7 +2096,7 @@ Locality state kulla save pannudhu */
                           ? 'caretup'
                           : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
@@ -1972,7 +2143,8 @@ Locality state kulla save pannudhu */
                        fontWeight:'500',
                       fontSize:14
                     }}>
-                    {Discipline ? Discipline : 'Select Discipline'}
+                    {Discipline ? Discipline : 'Select Discipline'} 
+                    
                   </Text>
                 </View>
                 <View
@@ -2016,13 +2188,14 @@ Locality state kulla save pannudhu */
                           ? 'caretup'
                           : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
               </TouchableOpacity>
               <View style={{height: 20}} />
-              <TouchableOpacity
+              <TouchableOpacity  
+              activeOpacity={1}
                 onPress={() => {
                   setDescriptionbtmsheet(true);
                 }}
@@ -2038,7 +2211,7 @@ Locality state kulla save pannudhu */
                   alignItems: 'center',
                   alignSelf: 'center',
                 }}>
-                <Text
+                <Text 
                   style={{
                     position: 'absolute',
                     left: Commonheight(14),
@@ -2058,7 +2231,7 @@ Locality state kulla save pannudhu */
                     alignSelf: 'center',
                   }}>
                   <TextInput
-                    style={{alignSelf: 'flex-start', color: 'black'}}
+                    style={{alignSelf: 'flex-start', color: 'black', width:'90%' }}
                     placeholder="Enter Description"
                     placeholderTextColor="black"
                     value={Description}
@@ -2104,7 +2277,7 @@ Locality state kulla save pannudhu */
                           ? 'caretup'
                           : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
@@ -2147,7 +2320,7 @@ Locality state kulla save pannudhu */
                     alignSelf: 'center',
                   }}>
                   <TextInput
-                    style={{alignSelf: 'flex-start', color: 'black'}}
+                    style={{alignSelf: 'flex-start', color: 'black',width:'90%' }}
                     placeholder="Enter Client Workorder No"
                     placeholderTextColor="black"
                     value={Client}
@@ -2193,7 +2366,7 @@ Locality state kulla save pannudhu */
                           ? 'caretup'
                           : 'caretdown'
                       }
-                      size={18}
+                      size={14}
                     />
                   </TouchableOpacity>
                 </View>
@@ -2202,10 +2375,16 @@ Locality state kulla save pannudhu */
               <View style={{height: 20}} />
 
               {/*View Response Time  */}
-              <View
+              
+            </View>
+            
+            </View>
+
+            <View
                 style={{
                   width: '100%',
                   height: 50,
+                
                   justifyContent: 'center',
                   alignItems: 'center',
                   alignSelf: 'center',
@@ -2224,7 +2403,7 @@ Locality state kulla save pannudhu */
                   <Text>
                     <AntDesign
                       name="pluscircleo"
-                      size={18}
+                      size={14}
                       style={{
                         color: 'black',
                         fontWeight: '600',
@@ -2235,25 +2414,14 @@ Locality state kulla save pannudhu */
                     />
                   </Text>
                 </View>
-              </View>
             </View>
-            </View>
-
-
-
-
-
-
-
-
-
-
-
-
+        </View>
+     </ScrollView>
             {/* CONTRACT  */}
             <Modal
               visible={Contractbtmsheet}
               transparent={true}
+              // style={{backgroundColor:'red'}}
               animationType="slide">
               <View style={{flex: 1}}>
                 <TouchableOpacity
@@ -2295,7 +2463,7 @@ Locality state kulla save pannudhu */
                       borderRadius: 20,
                       backgroundColor: '#ffffff',
                       height: 40,
-                      marginTop: 25,
+               marginTop: 20,
                       borderWidth: 1,
                       borderColor: '#b7b5b5',
                       flexDirection: 'row',
@@ -2416,7 +2584,7 @@ Locality state kulla save pannudhu */
                       borderRadius: 20,
                       backgroundColor: '#ffffff',
                       height: 40,
-                      marginTop: 25,
+               marginTop: 20,
                       borderWidth: 1,
                       borderColor: '#b7b5b5',
                       flexDirection: 'row',
@@ -2537,7 +2705,7 @@ Locality state kulla save pannudhu */
                       borderRadius: 20,
                       backgroundColor: '#ffffff',
                       height: 40,
-                      marginTop: 25,
+               marginTop: 20,
                       borderWidth: 1,
                       borderColor: '#b7b5b5',
                       flexDirection: 'row',
@@ -2659,7 +2827,7 @@ Locality state kulla save pannudhu */
                       borderRadius: 20,
                       backgroundColor: '#ffffff',
                       height: 40,
-                      marginTop: 25,
+               marginTop: 20,
                       borderWidth: 1,
                       borderColor: '#b7b5b5',
                       flexDirection: 'row',
@@ -2779,7 +2947,7 @@ Locality state kulla save pannudhu */
                       borderRadius: 20,
                       backgroundColor: '#ffffff',
                       height: 40,
-                      marginTop: 25,
+               marginTop: 20,
                       borderWidth: 1,
                       borderColor: '#b7b5b5',
                       flexDirection: 'row',
@@ -2898,7 +3066,7 @@ Locality state kulla save pannudhu */
                       borderRadius: 20,
                       backgroundColor: '#ffffff',
                       height: 40,
-                      marginTop: 25,
+               marginTop: 20,
                       borderWidth: 1,
                       borderColor: '#b7b5b5',
                       flexDirection: 'row',
@@ -3020,7 +3188,7 @@ Locality state kulla save pannudhu */
                       borderRadius: 20,
                       backgroundColor: '#ffffff',
                       height: 40,
-                      marginTop: 25,
+               marginTop: 20,
                       borderWidth: 1,
                       borderColor: '#b7b5b5',
                       flexDirection: 'row',
@@ -3142,7 +3310,7 @@ Locality state kulla save pannudhu */
                       borderRadius: 20,
                       backgroundColor: '#ffffff',
                       height: 40,
-                      marginTop: 25,
+               marginTop: 20,
                       borderWidth: 1,
                       borderColor: '#b7b5b5',
                       flexDirection: 'row',
@@ -3271,7 +3439,7 @@ Locality state kulla save pannudhu */
                       borderRadius: 20,
                       backgroundColor: '#ffffff',
                       height: 40,
-                      marginTop: 25,
+               marginTop: 20,
                       borderWidth: 1,
                       borderColor: '#b7b5b5',
                       flexDirection: 'row',
@@ -3394,7 +3562,7 @@ Locality state kulla save pannudhu */
                       borderRadius: 20,
                       backgroundColor: '#ffffff',
                       height: 40,
-                      marginTop: 25,
+               marginTop: 20,
                       borderWidth: 1,
                       borderColor: '#b7b5b5',
                       flexDirection: 'row',
@@ -3515,7 +3683,7 @@ Locality state kulla save pannudhu */
                       borderRadius: 20,
                       backgroundColor: '#ffffff',
                       height: 40,
-                      marginTop: 25,
+               marginTop: 20,
                       borderWidth: 1,
                       borderColor: '#b7b5b5',
                       flexDirection: 'row',
@@ -3594,38 +3762,23 @@ Locality state kulla save pannudhu */
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </View>
-
         {/* Button */}
-        <View style={{flex: 1, backgroundColor: 'white'}}>
-          <View></View>
+        <View style={{width:'100%',height:50,backgroundColor:'#007aff'}}>
+          <TouchableOpacity
+              style={{
+                width: '100%',
+                height: 50,
+                justifyContent: 'center',
+                alignSelf: 'center',
+                // marginTop: 20,
+                backgroundColor:'#007aff',
+                // borderRadius:10,
+              }}>
+              <Text onPress={handlePress}  style={{color:'#ffffff', textAlign:'center',fontWeight:'500'}}>Submit</Text>
+            </TouchableOpacity>
         </View>
-      </ScrollView>
+        
+    
     </SafeAreaView>
   );
 };

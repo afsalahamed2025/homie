@@ -4,14 +4,14 @@ import React from 'react'
  
 
 
-const StylishPopup = ({visible , message , onclose}) => {
+const StylishPopup = ({visible , message , onClose}) => {
   return (
     <Modal
     
           visible={visible}
-          transparent={true}   
-          animationType='fade'
-          onRequestClose={onclose}
+      transparent={true}
+      animationType='fade'
+      onRequestClose={onClose}
     >
 
        <View style={{
@@ -41,7 +41,7 @@ const StylishPopup = ({visible , message , onclose}) => {
             {message}
           </Text>
           <TouchableOpacity
-            onPress={onclose}
+            onPress={onClose}
             style={{
               backgroundColor: '#0073ff',
               paddingVertical: 12,
