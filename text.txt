@@ -1,2803 +1,541 @@
-    <View style={{width: '94%', justifyContent: 'center', alignSelf: 'center'}}>
-       <View
-            style={{
-              width: '100%',
-              height: 50,
-              backgroundColor: '#fff',
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            <View
-              style={{
-                width: '50%',
-                height: 30,
-                backgroundColor: 'yellow',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <Text
-                style={{
-                  color: '#0073ff',
-                  fontSize: 20,
-                  fontWeight: '600',
-                }}>
-                Complaint Details
-              </Text>
-            </View>
-            <TouchableOpacity
-              style={{
-                width: '25%',
-                height: 30,
-                backgroundColor: 'red',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <Text style={{color: '#00ffe1', fontWeight: '500'}}>Delete</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate('Break', {
-                  editData:item,
-                  editIndex:index,
-                });
-              }}
-              style={{
-                width: '25%',
-                height: 30,
-                backgroundColor: '#73ff00',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <Text style={{color: '#000000', fontWeight: '500'}}>Edit</Text>
-            </TouchableOpacity>
-          </View>
-      {updatedCards.map((item, index) => (
-        <View
-          key={item.id}
-          style={{
-            borderWidth: 1,
-            width: '100%',
-            alignItems: 'center',
-            padding: 10,
-            justifyContent: 'center',
-            alignSelf: 'center',
-            borderRadius: 10,
-          }}>
-          <View
-            style={{
-              width: '100%',
-              height: 20,
-              flexDirection: 'row',
-              justifyContent: 'space-around',
-              alignSelf: 'center',
-            }}>
-            <View
-              style={{
-                width: '10%',
-                height: 28,
+http://13.127.67.252:5040/ReachAnaProcess/
 
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <Icon3
-                name="file-document-edit-outline"
-                size={30}
-                color="#0073ff"
-              />
-            </View>
 
-            <View
-              style={{
-                width: '41%',
-                height: 20,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text style={{fontSize: 17, fontWeight: '600', color: '#000000'}}>
-                Nature of Complaint
-              </Text>
-            </View>
-            <View
-              style={{
-                width: '41%',
-                height: 20,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text style={{fontSize: 17, fontWeight: '600', color: '#0073ff'}}>
-                : {item.selectNatureofComplaint}
-              </Text>
-            </View>
-          </View>
-          <View style={{height: 10}} />
-          <View
-            style={{
-              width: '100%',
-              height: 20,
-              flexDirection: 'row',
-              justifyContent: 'space-around',
-              alignSelf: 'center',
-            }}>
-            <View
-              style={{
-                width: '10%',
-                height: 28,
-
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <Icon3 name="switch" size={30} color="#0073ff" />
-            </View>
-            <View
-              style={{
-                width: '41%',
-                height: 20,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text style={{fontSize: 17, fontWeight: '600', color: '#000000'}}>
-                Switches
-              </Text>
-            </View>
-            <View
-              style={{
-                width: '41%',
-                height: 20,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text style={{fontSize: 17, fontWeight: '600', color: '#0073ff'}}>
-                : {item.switches}
-              </Text>
-            </View>
-          </View>
-          <View style={{height: 10}} />
-          <View
-            style={{
-              width: '100%',
-              height: 20,
-              flexDirection: 'row',
-              justifyContent: 'space-around',
-              alignSelf: 'center',
-            }}>
-            <View
-              style={{
-                width: '10%',
-                height: 28,
-
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <Icon3 name="priority-high" size={30} color="#0073ff" />
-            </View>
-            <View
-              style={{
-                width: '41%',
-                height: 20,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text style={{fontSize: 17, fontWeight: '600', color: '#000000'}}>
-                Priority
-              </Text>
-            </View>
-            <View
-              style={{
-                width: '41%',
-                height: 20,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text style={{fontSize: 17, fontWeight: '600', color: '#0073ff'}}>
-                : {item.selectPriority}
-              </Text>
-            </View>
-          </View>
-          <View style={{height: 10}} />
-          <View
-            style={{
-              width: '100%',
-              height: 20,
-              flexDirection: 'row',
-              justifyContent: 'space-around',
-              alignSelf: 'center',
-            }}>
-            <View
-              style={{
-                width: '10%',
-                height: 28,
-
-                justifyContent: 'center',
-                alignSelf: 'center',
-                alignItems: 'center',
-              }}>
-              <MaterialIcons name="smart-button" size={30} color="#0073ff" />
-            </View>
-            <View
-              style={{
-                width: '41%',
-                height: 20,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text style={{fontSize: 17, fontWeight: '600', color: '#000000'}}>
-                Smart Switch
-              </Text>
-            </View>
-            <View
-              style={{
-                width: '41%',
-                height: 20,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text style={{fontSize: 17, fontWeight: '600', color: '#0073ff'}}>
-                : {item.smartSwitch}
-              </Text>
-            </View>
-          </View>
-          <View style={{height: 10}} />
-          <View
-            style={{
-              width: '100%',
-              height: 20,
-              flexDirection: 'row',
-              justifyContent: 'space-around',
-              alignSelf: 'center',
-            }}>
-            <View
-              style={{
-                width: '10%',
-                height: 28,
-
-                justifyContent: 'center',
-                alignSelf: 'center',
-                alignItems: 'center',
-              }}>
-              <MaterialIcons name="description" size={30} color="#0073ff" />
-            </View>
-            <View
-              style={{
-                width: '41%',
-                height: 20,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text style={{fontSize: 16, fontWeight: '600', color: '#000000'}}>
-                Description
-              </Text>
-            </View>
-            <View
-              style={{
-                width: '41%',
-                height: 20,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text style={{fontSize: 17, fontWeight: '500', color: '#0073ff'}}>
-                : {item.enterDescription}
-              </Text>
-            </View>
-          </View>
-          <View style={{height: 10}} />
-          <View
-            style={{
-              width: '100%',
-              height: 20,
-              flexDirection: 'row',
-              justifyContent: 'space-around',
-              alignSelf: 'center',
-            }}>
-            <View
-              style={{
-                width: '10%',
-                height: 28,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Icon3 name="format-list-numbered" size={30} color="#0073ff" />
-            </View>
-            <View
-              style={{
-                width: '41%',
-                height: 20,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text style={{fontSize: 17, fontWeight: '500', color: '#black'}}>
-                Client Worker No
-              </Text>
-            </View>
-            <View
-              style={{
-                width: '41%',
-                height: 20,
-                justifyContent: 'center',
-                alignSelf: 'center',
-              }}>
-              <Text style={{fontSize: 16, fontWeight: '600', color: '#0073ff'}}>
-                : {item.enterClientWorkerNo}
-              </Text>
-            </View>
-          </View>
-          <View style={{height: 10}} />
-        
-        </View>
-      ))}
-    </View>
-  );
-};
-
-export default BreakdownCards;
+{
+    "data": {
+        "p1": null,
+        "p2": "1104",
+        "p3": "1",
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null,
+        "p8": null,
+        "p9": null,
+        "p10": null,
+        "PageIndex_int": 1,
+        "PageSize_int": 10,
+        "Type_varchar": "ANALYSISDETAILSALL",
+        "UserGroupKey": "2112",
+        "UserAccessKey": "124"
+    }
+}
 
 
 
 
 
+PUBLIC CHANNELS
 
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  Modal,
-  FlatList,
-  Button,
-  Alert,
-  SafeAreaView,
-} from 'react-native';
-import React, {useState} from 'react';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import {format} from 'date-fns';
-import {ScrollView, TextInput} from 'react-native-gesture-handler';
-import EvilIcons from 'react-native-vector-icons/EvilIcons';
++
+Off-Topic
+Production
+More...
+PRIVATE CHANNELS
 
-const RegisterTicket = () => {
-  const [Contract, setContract] = useState('');
-  const [Contractidpk, setContractidpk] = useState('');
-  const [Contractbtmsheet, setContractbtmsheet] = useState(false);
-  const [Contract_data, setContract_data] = useState([]);
++
+DIRECT MESSAGES
 
-  const [Localitybtmsheet, setLocalitybtmsheet] = useState(false);
-  const [Locality, setLocality] = useState('');
-  const [LocalityData, setLocalityData] = useState([]);
-  const [Localityidpk, setLocalityidpk] = useState('');
++
+hussain
+ijas_ahamed
+kareem
+tahseen
+thoufeeq_it
+vignesh
+yousuf
+More...
 
-  const [Buildingbtmsheet, setBuildingbtmsheet] = useState(false);
-  const [Building, setBuilding] = useState('');
-  const [BuildingData, setBuildingData] = useState([]);
-  const [Buildingidpk, setBuildingidpk] = useState('');
+Offline
 
-  const [Floorbtmsheet, setFloorbtmsheet] = useState(false);
-  const [Floor, setFloor] = useState('');
-  const [FloorData, setFloorData] = useState([]);
-  const [Flooridpk, setFlooridpk] = useState([]);
+Add a channel description
 
-  const [Spotbtmsheet, setSpotbtmsheet] = useState(false);
-  const [Spot, setSpot] = useState('');
-  const [SpotData, setSpotData] = useState([]);
-  const [Spotidpk, setSpotidpk] = useState([]);
-
-  const [Servicebtmsheet, setServicebtmsheet] = useState(false);
-  const [Service, setService] = useState('');
-  const [ServiceData, setServiceData] = useState([]);
-  const [Serviceidpk, setServiceidpk] = useState([]);
-
-  const [Complaintbtmsheet, setComplaintbtmsheet] = useState(false);
-  const [Complaint, setComplaint] = useState('');
-  const [ComplaintData, setComplaintData] = useState([]);
-  const [Complaintidpk, setComplaintidpk] = useState([]);
-
-  const [Naturalbtmsheet, setNaturalbtmsheet] = useState(false);
-  const [Natural, setNatural] = useState('');
-  const [NaturalData, setNaturalData] = useState([]);
-  const [Naturalidpk, setNaturalidpk] = useState([]);
-
-  const [Divisionbtmsheet, setDivisionbtmsheet] = useState(false);
-  const [Division, setDivision] = useState('');
-  const [DivisionData, setDivisionData] = useState([]);
-  const [Divisionidpk, setDivisionidpk] = useState([]);
-
-  const [Prioritybtmsheet, setPrioritybtmsheet] = useState(false);
-  const [Priority, setPriority] = useState('');
-  const [PriorityData, setPriorityData] = useState([]);
-  const [Priorityidpk, setPriorityidpk] = useState([]);
-
-  const [Disciplinebtmsheet, setDisciplinebtmsheet] = useState(false);
-  const [Discipline, setDiscipline] = useState('');
-  const [DisciplineData, setDisciplineData] = useState([]);
-  const [Disciplineidpk, setDisciplineidpk] = useState([]);
-
-  const [Descriptionbtmsheet, setDescriptionbtmsheet] = useState(false);
-   const [Description, setDescription] = useState('');
-  const [DescriptionData, setDescriptionData] = useState([]);
-  // const [Descriptionidpk, setDescriptionidpk] = useState([]);
-
-  const [ClientData, setClientData] = useState([]);
-  const [Clientbtmsheet, setClientbtmsheet] = useState([]);
-   const [Client, setClient] = useState('');
+Search
 
 
-   const [searchText, setSearchText] = useState('');
+Sat, Jun 14, 2025
+	
+vignesh
+9:40 AM
+https://smartfm.cloud/Android_GlobalService/CollectCurrentReleaseURL1.php?ProjectKey=${userkeys}
 
-const filteredData = DisciplineData.filter(item =>
-  item.DisciplineName.toLowerCase().includes(searchText.toLowerCase())
-);
+userkeys => V5APP ; Certifyapp ;
 
+let Params = {
+      "data": [
+        {
+          "P1": ""
+          , "P2": ""
+          , "P3": WoNo ? WoNo : ""
+          , "P4": Timeformate
+          , "P5": null
+          , "P6": null
+          , "P7": null
+          , "P8": Description.replace(/[^a-zA-Z0-9 ]/g, '')
+          , "P9": ""
+          , "P10": ""
+          , "P11": "0"
+          , "P12": 0
+          , "P13": 0
+          , "P14": "0"
+          , "P15": ComplaintNatureIDPK ? "" : ComplaintNatureName
+          , "P16": "0"
+          , "P17": "0"
+          , "P18": ""
+          , "P19": null
+          , "P20": 0
+          , "P21": "0"
+          , "P22": "0"
+          , "P23": ResponseByTimes ? ResponseByTimesConvert : ""
+          , "P24": AnalysedByTimes ? AnalysedByTimesConvert : ""
+          , "P25": null
+          , "P26": FixedByTimes ? FixedByTimesConvert : ""
+          , "P27": null
+          , "P28": 0
+          , "P29": 0
+          , "P30": 0
+          , "P31": 0
+          , "P32": 0
+          , "P33": 0
+          , "P34": 0
+          , "P35": 0
+          , "P36": 0
+          , "P37": 0
+          , "P38": ""
+          , "P39": 0
+          , "P40": "0"
+          , "P41": 0
+          , "P42": ""
+          , "P43": ""
+          , "P44": 0
+          , "P45": ""
+          , "P46": ""
+          , "P47": ""
+          , "P48": ""
+          , "P49": "0"
+          , "P50": null
+          , "P51": ContractIDPK ? ContractIDPK : null
+          , "P52": LocationIDPK ? LocationIDPK : null
+          , "P53": BuildingIDPK ? BuildingIDPK : null
+          , "P54": FloorIDPK ? FloorIDPK : null
+          , "P55": SpotIDPK ? SpotIDPK : null
+          , "P56": PriorityID ? PriorityID : null
+          , "P57": DivisionID ? DivisionID : null
+          , "P58": DisciplineIDPK ? DisciplineIDPK : null
+          , "P59": "0"
+          , "P60": ComplaintNatureIDPK ? ComplaintNatureIDPK : null
+          , "P61": "6" // 11 in Web View
+          , "P62": ServiceTypeIDPK ? ServiceTypeIDPK : null
+          , "P63": null
+          , "P64": "4"
+          , "P65": cstate.complaintassetdata.length > 0 ? "2" : "1"
+          , "P66": ComplaintTypeIDPK ? ComplaintTypeIDPK : null
+          , "P67": null
+          , "P68": null
+          , "P69": cstate.complaintassetdata.length > 0 ? cstate.complaintassetdata[0].AssetIDPK : null
+          , "P70": null
+          , "P71": null
+          , "P72": "1"
+          , "P73": "0"
+          , "P74": UserID
+          , "P75": Timeformate
+          , "P76": UserID
+          , "P77": Timeformate
+        }
+      ]
+    }
+Show more
+	
+vignesh
+11:50 AM
+const message = status.message;
+            const Username = res.Output.data.p1;
+            const UserID = JSON.stringify(res.Output.data.p2);
+            const SessionID = res.Output.data.p3;
+            const UserGroupID = res.Output.data.p5;
+            const EmployeeID = JSON.stringify(res.Output.data.p6);
+            const ProductID = res.Output.data.p8;
+            const Password = res.Output.data.p12;
+            const IsBTCTech = res.Output.data.p17;
+            const FAImgMan = res.Output.data?.p18;
 
+            const DecodedSessionID = atob(SessionID)
+            const DecodedUserGroupID = atob(UserGroupID)
+            const DecodedProductID = atob(ProductID)
+            const DecodedPassword = atob(Password)
+
+            console.log({
+              "Message": message,
+              "Username": Username,
+              "UserID": UserID,
+              "SessionID": SessionID,
+              "UserGroupID": UserGroupID,
+              "EmployeeID": EmployeeID,
+              "ProductID": ProductID,
+              "Password": Password,
+              "IsBTCTech": IsBTCTech,
+              "FAImgMan": FAImgMan,
+              "DecodedSessionID": DecodedSessionID,
+              "DecodedUserGroupID": DecodedUserGroupID,
+              "DecodedProductID": DecodedProductID,
+              "DecodedPassword": DecodedPassword
+            })
+
+            cdispatch({ type: "UserName", payload: Username });
+            cdispatch({ type: "EmployeeId", payload: EmployeeID });
+            cdispatch({ type: 'VisibleSessionLogout', payload: false });
+
+            await storeData("Username", Username);
+            await storeData("UserGroupID", DecodedUserGroupID);
+            await storeData("EmployeeID", EmployeeID);
+            await storeData("UserID", UserID);
+            await storeData("ProductID", DecodedProductID);
+            await storeData("Password", DecodedPassword);
+            await storeData("SessionID", SessionID);
+Show more
+        const UserID = JSON.stringify(res.Output.data.p2);
+	
+vignesh
+2:55 PM
+async function getUserData(userKey) {
+  try {
+    // Replace this URL with your actual API endpoint
+    const url = `https://api.example.com/users/${userKey}`;
+    
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        // Add authentication headers if needed
+        // 'Authorization': `Bearer ${userKey}`,
+        // or
+        // 'X-API-Key': userKey
+      }
+    });
+
+    // Check if the response is successful
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    // Parse and return the JSON response
+    const data = await response.json();
+    return data;
+    
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+    throw error; // Re-throw the error so caller can handle it
+  }
+}
+	
+afsal
+5:41 PM
+import React, { useState ,useEffect} from 'react'
+import { View, Text, Image, Button, StyleSheet, TextInput, Alert } from 'react-native'
+
+import  AsyncStorage  from '@react-native-async-storage/async-storage';
+import Home from './Home';
+import {encode as btoa} from 'base-64'
+
+export default function Login({navigation}) {
+  const [username, setusername] = useState('')
+  const [password, setpassword] = useState('')
+
+useEffect(() => {
+ Saved_Data()
+}, [])
+
+   const Saved_Data= async()=>{
+      try{
+      const username=await AsyncStorage.getItem('username')
+      const password=await AsyncStorage.getItem('password')
+      console.log('Saved Username Async:',username)
+      console.log('Saved  Password Async:',password)
+      if (username && password){
+        navigation.navigate('Home') //replace use  pandarthu kku  (back pogathu login page kku) 
+      }
+      else{
+
+        console.log("Stays here itself")
+      }
+    } catch (error){
+      console.log('Error reading Aysnc:',error);
+    }
+  }
   const handlePress = async () => {
-    if (Contract == '') {
-      Alert.alert('Error', 'Please fill in all the fields');
-      return;
-    } else if (Locality == '') {
-      Alert.alert('Error', 'Select Contract');
-    } else if (Building == '') {
-      Alert.alert('Error', 'Select Building');
-    } else if (Floor == '') {
-      Alert.alert('Error', 'Select Floor');
-    } else if (Spot == '') {
-      Alert.alert('Error', 'Select Spot');
-    } else if (Service == '') {
-      Alert.alert('Error', 'Select Service');
-    }
+    const validusername = "sharuk";
+    const validpassword = "123456";
 
-    let today = new Date();
-    let TimeFormat = format(today, 'yyyy-MM-dd HH:mm:ss');
-    console.log('Formatted Date:', TimeFormat);
+if (!username.trim()) {
+  Alert.alert('Validation Error', 'Username field is required ')
+  return
+}
+else if (!password.trim()) {
+  Alert.alert('Validation Error', 'Password field is required')
+  return
+}
+else if (username !== validusername || password !== validpassword) {
+  const wrong =
+    username !== validusername ? 'Invalid Username'
+      :
+      password !== validpassword ? ' Invalid Password ' : 'Invalid Username or Password';
 
-    const requestData = {
-      data: [
-        {
-          P1: '',
-          P2: '',
-          P3: '',
-          P4: '2025-06-10 16:35:49',
-          P5: null,
-          P6: null,
-          P7: null,
-          P8: '',
-          P9: '',
-          P10: '',
-          P11: '0',
-          P12: 0,
-          P13: 0,
-          P14: '0',
-          P15: '',
-          P16: '0',
-          P17: '0',
-          P18: '',
-          P19: null,
-          P20: 0,
-          P21: '0',
-          P22: '0',
-          P23: '2025-06-10 17:35:31',
-          P24: '2025-06-10 18:35:31',
-          P25: null,
-          P26: '2025-06-10 19:35:31',
-          P27: null,
-          P28: 0,
-          P29: 0,
-          P30: 0,
-          P31: 0,
-          P32: 0,
-          P33: 0,
-          P34: 0,
-          P35: 0,
-          P36: 0,
-          P37: 0,
-          P38: '',
-          P39: 0,
-          P40: '0',
-          P41: 0,
-          P42: '',
-          P43: '',
-          P44: 0,
-          P45: '',
-          P46: '',
-          P47: '',
-          P48: '',
-          P49: '0',
-          P50: null,
-          P51: Contractidpk ? parseInt(Contractidpk) : null,
-          P52: Localityidpk ? parseInt(Localityidpk) : null,
-          P53: Buildingidpk ? parseInt(Buildingidpk) : null,
-          P54: Flooridpk ? parseInt(Flooridpk) : null,
-          P55: Spotidpk ? parseInt(Spotidpk) : null,
-          P56: Serviceidpk ? parseInt(Serviceidpk) : null,
-          P57: 1100,
-          P58: null,
-          P59: '0',
-          P60: 893,
-          P61: '6',
-          P62: 50,
-          P63: null,
-          P64: '4',
-          P65: '1',
-          P66: 6,
-          P67: null,
-          P68: null,
-          P69: null,
-          P70: null,
-          P71: null,
-          P72: '1',
-          P73: '0',
-          P74: '551',
-          P75: '2025-06-10 16:35:49',
-          P76: '551',
-          P77: '2025-06-10 16:35:49',
-        },
-      ],
-    };
-    console.log(requestData);
-    try {
-      const response = await fetch('http:13.127.67.252:5040/FP290S1/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestData),
-      });
-      const result = await response.json();
-      console.log('Api response:', result);
+  Alert.alert('Validation Error', wrong);
+  return;
+}
 
-      const status = result?.[0]?.status?.code;
 
-      if (status == '200') {
-        console.log('Success', 'Complaint SuccessFully');
-        Alert.alert('Success', 'Complaint SuccessFully');
-      } else {
-        const msg = result?.[0]?.status?.message || 'Subimisson Failed';
-        console.log('Error', msg);
-      }
-    } catch (error) {
-      console.log('Api Error:', error);
-    }
-  };
+const encodedUsername=btoa(username)
+const encodedPassword=btoa(password)
 
-  /* Contract */
-  const Saved_Data = async () => {
-    try {
-      const response = await fetch(
-        'http://13.127.67.252:5040/ReachComplaintRegProcess/',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+console.log('Encoded Username:',encodedUsername)
+console.log('Encoded Password:',encodedPassword)
 
-          body: JSON.stringify({
-            data: {
-              p1: null,
-              p2: '1104',
-              p3: null,
-              p4: null,
-              p5: null,
-              p6: '',
-              p7: null,
-              p8: null,
-              p9: null,
-              p10: null,
-              PageIndex_int: 1,
-              PageSize_int: 10,
-              Type_varchar: 'ContractIDPK',
-              UserGroupKey: '2112',
-              UserAccessKey: '124',
-            },
-          }),
-        },
-      );
 
-      const result = await response.json(); //Response JSON format-la edukkurathu
-      console.log('API Response:', result);
-
-      const Data = result?.Output?.data ?? [];
-      const Status = result?.Output?.status ?? [];
-      console.log(Data, 'Received Data');
-      console.log(Status, 'Status');
-      if (Status?.code == '200') {
-        setContract_data(Data);
-      }
-    } catch (error) {
-      console.log('API Error:', error);
-      Alert.alert('Error', 'Something went Wrong');
-    }
-  };
-
-  /* Locality_API */
-  const Locality_API = async () => {
-    const url = 'http://13.127.67.252:5040/ReachComplaintRegProcess/';
-    const Params = {
-      data: {
-        p1: null,
-        p2: '1104',
-        p3: Contractidpk /* Pass */,
-        p4: null,
-        p5: null,
-        p6: '',
-        p7: null,
-        p8: null,
-        p9: null,
-        p10: null,
-        PageIndex_int: 1,
-        PageSize_int: 10,
-        Type_varchar: 'LocalityIDPK',
-        UserGroupKey: '2112',
-        UserAccessKey: '124',
+try{
+    const response= await fetch('http://13.127.67.252:5040/FPU20S3/',{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
       },
-    };
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      // Minimum Login-ku Required
+      // p1 p2 user credentials base64 la
+      //p3–p6  app name user type  and action (login) send pannuradhu
+      body:JSON.stringify({
+        data:{
+          p1: btoa(username),
+          p2: btoa(password),
+          p3:'',
+          p4:'1',
+          p5:'Reach',
+          p6:'login',
         },
-        body: JSON.stringify(Params),
-      });
-      console.log({url, Params});
-      const result = await response.json();
-      console.log('API LA RESPONSE VARATHA ILLAYANU PAKURATHU:', result);
+      }),
+    });
 
-      /* result la poi Output nu check pannura. Athu kulla data irundha adha eduthu Data la poduM.
-Illana default a [] empty array podu */
-      //data la API la irukkura records, list, array of items irukkum.
-      const Data = result?.Output?.data ?? [];
-      console.log(Data, 'Received Data');
-      //Output kulla irukkura status object va edukkuM
-      const Status = result?.Output?.status ?? [];
-      console.log(Status, 'Status');
 
-      /*Status.code 200 ah irundha,?
-entha API la irundhu vandha Data ah
-Locality state kulla save pannudhu */
-      if (Status?.code == '200') {
-        setLocalityData(Data);
-      }
-    } catch (error) {
-      console.log('Api Error', error);
+  const result= await response.json() //Response JSON format-la edukkurathu
+console.log('API Response:',result);
+
+const statusCode =result?.Output?.status?.code;
+if(statusCode === '200'){
+  Alert.alert('Success','Login Sucessfully');
+  await AsyncStorage.setItem('username',username)
+  await AsyncStorage.setItem('password',password)
+
+  navigation.navigate(Home)
+  console.log('Login Successfully and Home Page Move:')
+}
+  else {
+    const errormsg=result?.Output?.status?.message || 'Login Failed '
+    Alert.alert('Login Error:',errormsg)
+    console.log('Login Error:',errormsg)
+  }
     }
-  };
-  /* Building_API */
-  const Building_API = async () => {
-    const url = 'http://13.127.67.252:5040/ReachComplaintRegProcess/';
-    const Params = {
-      data: {
-        p1: null,
-        p2: '1104',
-        p3: Contractidpk,
-        p4: Localityidpk,
-        p5: null,
-        p6: '',
-        p7: null,
-        p8: null,
-        p9: null,
-        p10: null,
-        PageIndex_int: 1,
-        PageSize_int: 10,
-        Type_varchar: 'BuildingIDPK',
-        UserGroupKey: '2112',
-        UserAccessKey: '124',
-      },
-    };
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Params),
-      });
-      console.log({url, Params});
-      const result = await response.json();
-      console.log('API LA RESPONSE :', result);
-
-      const Data = result?.Output?.data ?? [];
-      console.log(Data, 'Received Data');
-
-      const Status = result?.Output?.status ?? [];
-      console.log(Status, 'Status');
-
-      if (Status?.code == '200') {
-        setBuildingData(Data);
-      }
-    } catch (error) {
-      console.log('Api Error', error);
+    catch (error) {
+      console.log('API Error:',error)
+     Alert.alert('Error',"Something went Wrong")
     }
-  };
-  /* FloorData */
-  const Floor_API = async () => {
-    const url = 'http://13.127.67.252:5040/ReachComplaintRegProcess/';
-    const Params = {
-      data: {
-        p1: null,
-        p2: '1104',
-        p3: Contractidpk,
-        p4: Localityidpk,
-        p5: Buildingidpk,
-        p6: '',
-        p7: null,
-        p8: null,
-        p9: null,
-        p10: null,
-        PageIndex_int: 1,
-        PageSize_int: 10,
-        Type_varchar: 'FloorIDPK',
-        UserGroupKey: '2112',
-        UserAccessKey: '124',
-      },
-    };
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Params),
-      });
-      console.log({url, Params});
-      const result = await response.json();
-      console.log('Api RESPONSE :', result);
 
-      const Data = result?.Output?.data ?? [];
-      console.log(Data, 'Received Data');
-
-      const Status = result?.Output?.status ?? [];
-      console.log(Status, 'status');
-
-      if (Status?.code == '200') {
-        setFloorData(Data);
-      }
-    } catch (error) {
-      console.log('Api Error', error);
-    }
-  };
-  /* SPOT DATA */
-  const Spot_API = async () => {
-    const url = 'http://13.127.67.252:5040/ReachComplaintRegProcess/';
-    const Params = {
-      data: {
-        p1: null,
-        p2: '1104',
-        p3: Contractidpk,
-        p4: Localityidpk,
-        p5: Buildingidpk,
-        p6: '',
-        p7: null,
-        p8: null,
-        p9: null,
-        p10: null,
-        PageIndex_int: 1,
-        PageSize_int: 10,
-        Type_varchar: 'SpotIDPK',
-        UserGroupKey: '2112',
-        UserAccessKey: '124',
-      },
-    };
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Params),
-      });
-      console.log({url, Params});
-      const result = await response.json();
-      console.log('Api check response:', result);
-
-      const Data = result?.Output?.data ?? [];
-      console.log(Data, 'Received Data');
-
-      const Status = result?.Output?.status ?? [];
-      console.log(Status, 'Status');
-
-      if (Status?.code == '200') {
-        setSpotData(Data);
-        console.log('Data to set in Spotdata', Data);
-      }
-    } catch (error) {
-      console.log('Api Error', error);
-    }
-  };
-
-  /* SERVICE DATA */
-  const Service_API = async () => {
-    const url = 'http://13.127.67.252:5040/ReachComplaintRegProcess/';
-    const Params = {
-      data: {
-        p1: null,
-        p2: '1117',
-        p3: Contractidpk,
-        p4: Localityidpk,
-        p5: Buildingidpk,
-        p6: '',
-        p7: null,
-        p8: null,
-        p9: null,
-        p10: null,
-        PageIndex_int: 1,
-        PageSize_int: 10,
-        Type_varchar: 'ServiceTypeIDPK',
-        UserGroupKey: '2112',
-        UserAccessKey: '124',
-      },
-    };
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Params),
-      });
-      console.log({url, Params});
-      const result = await response.json();
-      console.log('Api check response:', result);
-
-      const Data = result?.Output?.data ?? [];
-      console.log(Data, 'Received Data');
-
-      const Status = result?.Output?.status ?? [];
-      console.log(Status, 'Status');
-
-      if (Status?.code == '200') {
-        setServiceData(Data);
-        console.log('Data to set in Spotdata', Data);
-      }
-    } catch (error) {
-      console.log('Api Error', error);
-    }
-  };
-
-  /* Complaint Data */
-  const Complaint_API = async () => {
-    const url = 'http://13.127.67.252:5040/ReachComplaintRegProcess/';
-    const Params = {
-      data: {
-        p1: null,
-        p2: '1729',
-        p3: 1883,
-        p4: 175,
-        p5: 1787,
-        p6: '',
-        p7: null,
-        p8: null,
-        p9: null,
-        p10: null,
-        PageIndex_int: 1,
-        PageSize_int: 10,
-        Type_varchar: 'CCMComplaintTypeIDPK',
-        UserGroupKey: '2110',
-        UserAccessKey: '551',
-      },
-    };
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Params),
-      });
-      console.log({url, Params});
-      const result = await response.json();
-      console.log('Api check response:', result);
-
-      const Data = result?.Output?.data ?? [];
-      console.log(Data, 'Received Data');
-
-      const Status = result?.Output?.status ?? [];
-      console.log(Status, 'Status');
-
-      if (Status?.code == '200') {
-        setComplaintData(Data);
-        console.log('Data to set in NaturalData', Data);
-      }
-    } catch (error) {
-      console.log('Api Error', error);
-    }
-  };
-
-  /* NATURAL COMPLAINTS */
-
-  const Natural_API = async () => {
-    const url = 'http://13.127.67.252:5040/ReachComplaintRegProcess/';
-    const Params = {
-      data: {
-        p1: null,
-        p2: null,
-        p3: null,
-        p4: null,
-        p5: null,
-        p6: '',
-        p7: Divisionidpk ? Divisionidpk : null, 
-        p8: Complaintidpk ? Complaintidpk : null,
-        p9: '2025-06-11 14:49:02',
-        p10: null,
-        PageIndex_int: 1,
-        PageSize_int: 10,
-        Type_varchar: 'ComplaintNatureIDPK',
-        UserGroupKey: '2112',
-        UserAccessKey: '124',
-      },
-    };
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Params),
-      });
-      console.log({url, Params});
-      const result = await response.json();
-      console.log('Api check response:', result);
-
-      const Data = result?.Output?.data ?? [];
-      console.log(Data, 'Received Data');
-
-      const Status = result?.Output?.status ?? [];
-      console.log(Status, 'Status');
-
-      if (Status?.code == '200') {
-        setNaturalData(Data);
-        console.log('Data to set in NaturalData', Data);
-      }
-    } catch (error) {
-      console.log('Api Error', error);
-    }
-  };
-  /* DIVISION */
-
-  const Division_API = async () => {
-    const url = 'http://13.127.67.252:5040/ReachComplaintRegProcess/';
-    const Params = {
-      data: {
-        p1: null,
-        p2: null,
-        p3: null,
-        p4: null,
-        p5: null,
-        p6: '',
-        p7: 53,
-        p8: 573, 
-        p9: '2025-06-11 14:49:02',
-        p10: null,
-        PageIndex_int: 1,
-        PageSize_int: 10,
-        Type_varchar: 'DIVISIONIDPK',
-        UserGroupKey: '2112',
-        UserAccessKey: '124',
-      },
-    };
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Params),
-      });
-      console.log({url, Params});
-      const result = await response.json();
-      console.log('Api check response:', result);
-
-      const Data = result?.Output?.data ?? [];
-      console.log(Data, 'Received Data');
-
-      const Status = result?.Output?.status ?? [];
-      console.log(Status, 'Status');
-
-      if (Status?.code == '200') {
-        setDivisionData(Data);
-        console.log('Data to set in Division data', Data);
-      }
-    } catch (error) {
-      console.log('Api Error', error);
-    }
-  };
-
-  /* PRIORITY */
-  const Priority_API = async () => {
-    const url = 'http://13.127.67.252:5040/ReachComplaintRegProcess/';
-    const Params = {
-      data: {
-        p1: 573,
-        p2: null,
-        p3: null,
-        p4: null,
-        p5: null,
-        p6: '',
-        p7: Divisionidpk ?? null,
-        p8: Complaintidpk ?? null,
-        p9: '2025-06-11 14:51:22',
-        p10: null,
-        PageIndex_int: 1,
-        PageSize_int: 10,
-        Type_varchar: 'PriorityIDPK',
-        UserGroupKey: '2112',
-        UserAccessKey: '124',
-      },
-    };
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Params),
-      });
-      console.log({url, Params});
-      const result = await response.json();
-      console.log('Api check response:', result);
-
-      const Data = result?.Output?.data ?? [];
-      console.log(Data, 'Received Data');
-
-      const Status = result?.Output?.status ?? [];
-      console.log(Status, 'Status');
-
-      if (Status?.code == '200') {
-        setPriorityData(Data);
-        console.log('Data to set in PriorityData', Data);
-      }
-    } catch (error) {
-      console.log('Api Error', error);
-    }
-  };
-
-  /* Discipline */
-
-  const Descipline_API = async () => {
-    const url = 'http://13.127.67.252:5040/ReachComplaintRegProcess/';
-    const Params = {
-      data: {
-        p1: 573,
-        p2: null,
-        p3: null,
-        p4: null,
-        p5: null,
-        p6: '',
-        p7: 1071,
-        p8: 4,
-        p9: '2025-06-11 14:51:22',
-        p10: null,
-        PageIndex_int: 1,
-        PageSize_int: 10,
-        Type_varchar: 'DisciplineIDPK',
-        UserGroupKey: '2112',
-        UserAccessKey: '124',
-      },
-    };
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Params),
-      });
-      console.log({url, Params});
-      const result = await response.json();
-      console.log('Api check response:', result);
-
-      const Data = result?.Output?.data ?? [];
-      console.log(Data, 'Received Data');
-
-      const Status = result?.Output?.status ?? [];
-      console.log(Status, 'Status');
-
-      if (Status?.code == '200') {
-        setDisciplineData(Data);
-        console.log('Data to set in PriorityData', Data);
-      }
-    } catch (error) {
-      console.log('Api Error', error);
-    }
-  };
+  }
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <View
-          style={{
-            backgroundColor: '#ffffff',
-            // padding: 10,
-            width: '96%',
-            alignItems: 'center',
-           justifyContent: 'center',
-            alignSelf: 'center',
-            // height:1150
-          }}>
+    <View style={styles.container
+    }>
+      <Text style={styles.title}>Login Page</Text>
+      <Image source={require('../assets/image/Login_page_Background.png')} style={styles.image} />
 
+  <TextInput placeholder='Name' placeholderTextColor='#0073ff' onChangeText={setusername} style={styles.input} />
+  <TextInput placeholder='Password' placeholderTextColor='#0073ff' onChangeText={setpassword} secureTextEntry={true} style={styles.input} />
 
-{/*  */}
-            <View
-            style={{
-              width: '100%',
-              height: 50,
-              alignSelf: 'center',
-              alignSelf: 'center',
-              justifyContent: 'center',
-              elevation:10,
-              backgroundColor:"#ffffff",
-            }}>
-            <View
-              style={{
-                width: '100%',
-                height: 40,
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                
-              }}>
-              <Text style={{fontSize: 16, fontWeight: '500', color: '#0091ff'}}>
-                Primary Details
-              </Text>
-                 <Text style={{fontSize: 16, fontWeight: '500', color: '#000000'}}>
-                Attachments [0/5]
-              </Text>
-            </View>
-          </View>
+  <Button title='logins' onPress={handlePress} />
 
-          {/* Complaint No date and Time */}
-          <View
-            style={{
-              width: '100%',
-              height: 40,
-              flexDirection: 'row',
-              justifyContent: 'space-around',
-              alignItems: 'center',
-              alignSelf: 'center',
-              marginTop:10,
-            }}>
-            <View
-              style={{
-                width: '50%',
-                height: 40,
-                alignItems: 'flex-start',
-                alignSelf: 'center',
-                justifyContent: 'center',
-              }}>
-              <Text style={{fontSize: 15, fontWeight: '600',color:'#000000'}}>
-                Complaint No
-              </Text>
-              <Text style={{fontSize: 15, fontWeight: '600',color:'#000000'}}>
-                Date and Time
-              </Text>
-            </View>
-            <View
-              style={{
-                width: '50%',
-                height: 40,
-                alignItems: 'flex-start',
-                alignSelf: 'center',
-                justifyContent: 'center',
-              }}>
-              <Text style={{fontSize: 15, fontWeight: '400',color:'#000000'}}>
-                : Auto Genorate
-              </Text>
-              <Text style={{fontSize: 15, fontWeight: '400',color:'#000000'}}>
-                : 11-06-2025 12:06:23 PM
-              </Text>
-            </View>
-          </View>
-
-          {/* Top Select Complaint Type */}
-          <View
-            style={{
-              width: '100%',
-              // height:500,
-              marginTop: 20,
-              elevation: 10,
-
-              alignItems: 'center',
-              justifyContent: 'center',
-              alignSelf: 'center',
-              backgroundColor:'#ffffff'
-            }}>
-            <TouchableOpacity
-              onPress={() => {
-                setComplaintbtmsheet(true);
-                Complaint_API();
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}>
-                  {Complaint ? Complaint : 'Select Complaint Type'}
-                </Text>
-              </View>
-                    <View
-                  style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                     />
-             <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Complaint) {
-          setComplaint('');
-        } else {
-          setComplaintbtmsheet(!Complaintbtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Complaint ? 'close' : Complaintbtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-            <View style={{height: 20}} />
-          </View>
-
-          {/*  Complainer Details Title */}
-          <View
-            style={{
-              width: '100%',
-              height: 50,
-              alignSelf: 'center',
-              alignSelf: 'center',
-              justifyContent: 'center',
-            }}>
-            <View
-              style={{
-                width: '100%',
-                height: 40,
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'flex-start',
-                borderBottomWidth:1,
-                borderBottomColor:'#d7d3d3',
-              }}>
-              <Text style={{fontSize: 16, fontWeight: '500', color: '#0091ff'}}>
-                Complainer Details
-              </Text>
-            </View>
-          </View>
-
-        {/* Top COMPLANT FIELDS */}
-
-          <View
-            style={{
-              width: '100%',
-              // height:500,
-              // marginTop:40,
-              elevation: 10,
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              alignSelf: 'center',
-              backgroundColor:'#ffffff'
-            }}>
-            <TouchableOpacity
-              onPress={() => {
-                setContractbtmsheet(true);
-                Saved_Data();
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}>
-                  {Contract ? Contract : 'Select Contract'}
-                </Text>
-              </View>
-                        <View
-                  style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                     />
-             <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Contract) {
-          setContract('');
-        } else {
-          setContractbtmsheet(!Contractbtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Contract ? 'close' : Contractbtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-            <View style={{height: 20}} />
-            <TouchableOpacity
-              onPress={() => {
-                setLocalitybtmsheet(true), Locality_API();
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}>
-                  {Locality ? Locality : 'Select Locality'}
-                </Text>
-              </View>
-                    <View
-                  style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                     />
-             <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Locality) {
-          setLocality('');
-        } else {
-          setLocalitybtmsheet(!Localitybtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Locality ? 'close' : Localitybtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-            <View style={{height: 20}} />
-              <TouchableOpacity
-              onPress={() => {
-                setBuildingbtmsheet(true), Building_API ();
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}>
-                  {Building ? Building : 'Select Building'}
-                </Text>
-              </View>
-                    <View
-                  style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                     />
-    <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Building) {
-          setBuilding('');
-        } else {
-          setBuildingbtmsheet(!Buildingbtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Building ? 'close' : Buildingbtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-            <View style={{height: 20}} />
-             <TouchableOpacity
-              onPress={() => {
-                setFloorbtmsheet(true), Floor_API ();
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}>
-                  {Floor ? Floor : 'Select Floor'}
-                </Text>
-              </View>
-                    <View
-                  style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                     />
-    <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Floor) {
-          setFloor('');
-        } else {
-          setFloorbtmsheet(!Floorbtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Floor ? 'close' : Floorbtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-            <View style={{height: 20}} />
-              <TouchableOpacity
-              onPress={() => {
-                setSpotbtmsheet(true), Spot_API ();
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}>
-                  {Spot ? Spot : 'Select Spot'}
-                </Text>
-              </View>
-                    <View
-                  style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                     />
-    <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Spot) {
-          setSpot('');
-        } else {
-          setSpotbtmsheet(!Spotbtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Spot ? 'close' : Spotbtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-            <View style={{height: 20}} />
-           <TouchableOpacity
-              onPress={() => {
-                setServicebtmsheet(true), Service_API ();
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}>
-                  {Service ? Service : 'Select Service'}
-                </Text>
-              </View>
-                    <View
-                  style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                     />
-    <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Service) {
-          setService('');
-        } else {
-          setServicebtmsheet(!Servicebtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Service ? 'close' : Servicebtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-            <View style={{height: 20}} />
-          </View>
-
-        {/* DOWN  Complainer  Title */}
-          <View
-            style={{
-              width: '100%',
-              height: 50,
-              alignSelf: 'center',
-              alignSelf: 'center',
-              justifyContent: 'center',
-        
-            }}>
-            <View
-              style={{
-                width: '100%',
-                height: 40,
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'flex-start',
-                      borderBottomWidth:1,
-              borderBottomColor:'#d7d3d3',
-              }}>
-              <Text style={{fontSize: 16, fontWeight: '500', color: '#0091ff'}}>
-                Complainer Details
-              </Text>
-            </View>
-          </View>
-
-     {/* DOWN COMPLANT FIELDS */}
-
-          <View
-            style={{
-              width: '100%',
-              // height:500,
-              // marginTop:40,
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              alignSelf: 'center',
-              elevation:10,
-              backgroundColor:'#ffffff'
-            }}>
-               <TouchableOpacity
-              onPress={() => {
-                setNaturalbtmsheet(true), Natural_API();
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}>
-                  {Natural ? Natural : 'Select Natural'}
-                </Text>
-              </View>
-            <View
-                        style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                      />
-    <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Natural) {
-          setNatural('');
-        } else {
-          setNaturalbtmsheet(!Naturalbtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Natural ? 'close' : Naturalbtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-            <View style={{height: 20}} />
-            <TouchableOpacity
-              onPress={() => {
-                setDivisionbtmsheet(true), Division_API();
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}>
-                  {Division ? Division : 'Select Division'}
-                </Text>
-              </View>
-            <View
-                        style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                      />
-    <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Division) {
-          setDivision('');
-        } else {
-          setDivisionbtmsheet(!Divisionbtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Division ? 'close' : Divisionbtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-
-            <View style={{height: 20}} />
-            <TouchableOpacity
-              onPress={() => {
-                setPrioritybtmsheet(true), Priority_API();
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}>
-                  {Priority ? Priority : 'Select Priority'}
-                </Text>
-              </View>
-            <View
-                        style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                      />
-    <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Priority) {
-          setPriority('');
-        } else {
-          setPrioritybtmsheet(!Prioritybtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Priority ? 'close' : Prioritybtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-            <View style={{height: 20}} />
-            <TouchableOpacity
-              onPress={() => {
-                setDisciplinebtmsheet(true), Descipline_API();
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}>
-                  {Discipline ? Discipline : 'Select Discipline'}
-                </Text>
-              </View>
-               <View
-                  style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                     />
-    <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Discipline) {
-          setDiscipline('');
-        } else {
-          setDisciplinebtmsheet(!Disciplinebtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Discipline ? 'close' : Disciplinebtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-            <View style={{height: 20}} />
-            <TouchableOpacity
-              onPress={() => {
-                setSpotbtmsheet(true), Spot_API();
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <Text
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}>
-                  {Spot ? Spot : 'Select Description'}
-                </Text>
-              </View>
-                    <View
-                  style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                     />
-    <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Description) {
-          setDescription('');
-        } else {
-          setDescriptionbtmsheet(!Descriptionbtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Description ? 'close' : Descriptionbtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-            <View style={{height: 20}} />
-            <TouchableOpacity
-              onPress={() => {
-                setClientbtmsheet(true);
-              }}
-              style={{
-                borderColor: '#0073ff',
-                borderRadius: 7,
-                borderWidth: 1,
-                padding: 5,
-                flexDirection: 'row',
-                width: '100%',
-                height: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-              }}>
-              <View
-                style={{
-                  width: '90%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                }}>
-                <TextInput
-                  style={{
-                    alignSelf: 'flex-start',
-                    color: 'black',
-                  }}
-                  placeholder="Enter Client Workorder No"
-                  placeholderTextColor="#000000">
-                  {/* {Client ? Client : 'Select Description'} */}
-                </TextInput>
-              </View>
-                       <View
-                  style={{
-                          width: 1,
-                          height: 40,
-                          backgroundColor: '#d0cdcd',
-                          fontSize: '16',
-                          fontWeight: '100',
-                          justifyContent: 'center',
-                          alignSelf: 'center',
-                        }}
-                     />
-    <View style={{ width: '10%', alignItems: 'center',justifyContent:'center',alignSelf:'center' }}>
-    <TouchableOpacity
-      onPress={() => {
-        if (Client) {
-          setClient('');
-        } else {
-          setClientbtmsheet(!Clientbtmsheet);
-        }
-      }}
-      style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}
-    >
-      <AntDesign  style={{ color: '#000000',fontWeight:'700', }}
-        name={Client ? 'close' : Clientbtmsheet ? 'caretup' : 'caretdown'}
-        size={18}
-
-      />
-    </TouchableOpacity>
-  </View>
-            </TouchableOpacity>
-            <View style={{height: 20}} />
-
-           {/*View Response Time  */}
-           <View style={{width:'100%',height:50,justifyContent:'center',alignItems:'center',alignSelf:'center'}} >
-          <View style={{width:'100%', flexDirection:'row',justifyContent:'space-around',alignItems:'center',alignSelf:'center'}}>
-            <Text style={{color:'black',fontSize:14}}>
-              View Response Time
-            </Text>
-            <Text>
-           <AntDesign
-        name="pluscircleo"
-        size={18}
-        style={{color: 'black', fontWeight:'600' , justifyContent:'center',alignItems:'center', alignSelf: 'center'}}
-        />
-
-            </Text>
-          </View>
-         
-            </View>
-          </View>
-       
-      {/* MODAL BOXING  ALL */}
-
-          {/* CONTRACT  */}
-          <Modal
-            visible={Contractbtmsheet}
-            transparent={true}
-            animationType="slide">
-            <View style={{flex: 1}}>
-              <TouchableOpacity
-                onPress={() => {
-                  setContractbtmsheet(false);
-                }}
-                style={{flex: 0.5}}></TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  setContractbtmsheet(false);
-                }}
-                style={{
-                  flex: 0.5,
-                  backgroundColor: '#ffffff',
-                  borderTopRightRadius: 30,
-                  borderTopLeftRadius: 30,
-                  overflow: 'hidden',
-                }}>
-                <FlatList
-                  data={Contract_data}
-                  keyExtractor={item => item.id}
-                  renderItem={({item}) => {
-                    return (
-                      <TouchableOpacity
-                        onPress={() => {
-                          console.log(item);
-                          setContractbtmsheet(false);
-                          setContract(item.ContractName);
-                          setContractidpk(item.ContractIDPK);
-                        }}
-                        style={{
-                          padding: 15,
-                          borderBottomWidth: 0.5,
-                          borderBottomColor: '#000000',
-                          backgroundColor: '#eaa3a3',
-                        }}>
-                        <Text
-                          style={{
-                            alignSelf: 'center',
-                            alignItems: 'flex-start',
-                            justifyContent: 'flex-start',
-                            color: 'black',
-                          }}>
-                          {item.ContractName}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  }}
-                />
-              </TouchableOpacity>
-            </View>
-          </Modal>
-
-          {/* LOCALITY */}
-          <Modal
-            visible={Localitybtmsheet}
-            transparent={true}
-            animationType="slide">
-            <View style={{flex: 1}}>
-              <TouchableOpacity
-                onPress={() => {
-                  setLocalitybtmsheet(false);
-                }}
-                style={{flex: 0.5}}></TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  setLocalitybtmsheet(false);
-                }}
-                style={{
-                  flex: 0.5,
-                  backgroundColor: '#f0b9b9',
-                  borderTopRightRadius: 30,
-                  borderTopLeftRadius: 30,
-                  overflow: 'hidden',
-                }}>
-                <FlatList
-                  data={LocalityData}
-                  keyExtractor={item => item.id}
-                  renderItem={({item}) => {
-                    return (
-                      <TouchableOpacity
-                        onPress={() => {
-                          console.log(item);
-                          setLocalitybtmsheet(false);
-                          setLocality(item.LocalityName);
-                          setLocalityidpk(item.LocalityIDPK);
-                        }}
-                        style={{
-                          padding: 15,
-                          borderBottomWidth: 0.5,
-                          borderBottomColor: '#000000',
-                        }}>
-                        <Text
-                          style={{
-                            alignSelf: 'center',
-                            alignItems: 'flex-start',
-                            justifyContent: 'flex-start',
-                            color: 'black',
-                          }}>
-                          {item.LocalityName}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  }}
-                />
-              </TouchableOpacity>
-            </View>
-          </Modal>
-
-          {/* BUILDING */}
-          <Modal
-            visible={Buildingbtmsheet}
-            transparent={true}
-            animationType="slide">
-            <View style={{flex: 1}}>
-              <TouchableOpacity
-                onPress={() => {
-                  setBuildingbtmsheet(false);
-                }}
-                style={{flex: 0.5}}></TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  setBuildingbtmsheet(false);
-                }}
-                style={{
-                  flex: 0.5,
-                  backgroundColor: '#ffffff',
-                  borderTopRightRadius: 30,
-                  borderTopLeftRadius: 30,
-                  overflow: 'hidden',
-                }}>
-                <FlatList
-                  data={BuildingData}
-                  keyExtractor={item => item.id}
-                  renderItem={({item}) => {
-                    return (
-                      <TouchableOpacity
-                        onPress={() => {
-                          console.log(item);
-                          setBuildingbtmsheet(false);
-                          setBuilding(item.BuildingName);
-                          setBuildingidpk(item.BuildingIDPK);
-                        }}
-                        style={{
-                          padding: 15,
-                          borderBottomWidth: 0.5,
-                          borderBottomColor: '#000000',
-                        }}>
-                        <Text
-                          style={{
-                            alignSelf: 'center',
-                            alignItems: 'flex-start',
-                            justifyContent: 'flex-start',
-                            color: 'black',
-                          }}>
-                          {item.BuildingName}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  }}
-                />
-              </TouchableOpacity>
-            </View>
-          </Modal>
-
-          {/* Floor */}
-          <Modal
-            visible={Floorbtmsheet}
-            transparent={true}
-            animationType="slide">
-            <View style={{flex: 1}}>
-              <TouchableOpacity
-                onPress={() => {
-                  setFloorbtmsheet(false);
-                }}
-                style={{flex: 0.5}}></TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  setFloorbtmsheet(false);
-                }}
-                style={{
-                  flex: 0.5,
-                  backgroundColor: '#ffffff',
-                  borderTopRightRadius: 30,
-                  borderTopLeftRadius: 30,
-                  overflow: 'hidden',
-                }}>
-                <FlatList
-                  data={FloorData}
-                  keyExtractor={item => item.id}
-                  renderItem={({item}) => {
-                    return (
-                      <TouchableOpacity
-                        onPress={() => {
-                          console.log(item);
-                          setFloorbtmsheet(false);
-                          setFloor(item.FloorName);
-                          setFlooridpk(item.FloorIDPK);
-                        }}
-                        style={{
-                          padding: 15,
-                          borderBottomWidth: 0.5,
-                          borderBottomColor: '#000000',
-                        }}>
-                        <Text
-                          style={{
-                            alignSelf: 'center',
-                            alignItems: 'flex-start',
-                            justifyContent: 'flex-start',
-                            color: 'black',
-                          }}>
-                          {item.FloorName}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  }}
-                />
-              </TouchableOpacity>
-            </View>
-          </Modal>
-
-          {/* SPOT */}
-          <Modal
-            visible={Spotbtmsheet}
-            transparent={true}
-            animationType="slide">
-            <View style={{flex: 1}}>
-              <TouchableOpacity
-                onPress={() => {
-                  setSpotbtmsheet(false);
-                }}
-                style={{flex: 0.5}}></TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  setSpotbtmsheet(false);
-                }}
-                style={{
-                  flex: 0.5,
-                  backgroundColor: '#ffffff',
-                  borderTopRightRadius: 30,
-                  borderTopLeftRadius: 30,
-                  overflow: 'hidden',
-                }}>
-                <FlatList
-                  data={SpotData}
-                  keyExtractor={item => item.id}
-                  renderItem={({item}) => {
-                    return (
-                      <TouchableOpacity
-                        onPress={() => {
-                          setSpot(item.SpotName);
-                          setSpotbtmsheet(false);
-                          setSpotidpk(item.SpotIDPK);
-                        }}
-                        style={{
-                          padding: 15,
-                          borderBottomWidth: 0.5,
-                          borderBottomColor: '#000000',
-                        }}>
-                        <Text
-                          style={{
-                            alignSelf: 'center',
-                            alignItems: 'flex-start',
-                            justifyContent: 'flex-start',
-                            color: 'black',
-                          }}>
-                          {item.SpotName}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  }}
-                />
-              </TouchableOpacity>
-            </View>
-          </Modal>
-
-          {/* Service Spot */}
-          <Modal
-            visible={Servicebtmsheet}
-            transparent={true}
-            animationType="slide">
-            <View style={{flex: 1}}>
-              <TouchableOpacity
-                onPress={() => {
-                  setServicebtmsheet(false);
-                }}
-                style={{flex: 0.5}}></TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  setServicebtmsheet(false);
-                }}
-                style={{
-                  flex: 0.5,
-                  backgroundColor: '#ffffff',
-                  borderTopRightRadius: 30,
-                  borderTopLeftRadius: 30,
-                  overflow: 'hidden',
-                }}>
-                <FlatList
-                  data={ServiceData}
-                  keyExtractor={item => item.id}
-                  renderItem={({item}) => {
-                    return (
-                      <TouchableOpacity
-                        onPress={() => {
-                          setServicebtmsheet(false);
-                          setService(item.ServiceTypeName);
-                          setServiceidpk(item.ServiceIDPK);
-                        }}
-                        style={{
-                          padding: 15,
-                          borderBottomWidth: 0.5,
-                          borderBottomColor: '#000000',
-                        }}>
-                        <Text
-                          style={{
-                            alignSelf: 'center',
-                            alignItems: 'flex-start',
-                            justifyContent: 'flex-start',
-                            color: 'black',
-                          }}>
-                          {item.ServiceTypeName}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  }}
-                />
-              </TouchableOpacity>
-            </View>
-          </Modal>
-
-          {/* Complaint */}
-
-          <Modal
-            visible={Complaintbtmsheet}
-            transparent={true}
-            animationType="slide">
-            <View style={{flex: 1}}>
-              <TouchableOpacity
-                onPress={() => {
-                  setComplaintbtmsheet(false);
-                }}
-                style={{flex: 0.5}}></TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  setComplaintbtmsheet(false);
-                }}
-                style={{
-                  flex: 0.5,
-                  backgroundColor: '#ffffff',
-                  borderTopRightRadius: 30,
-                  borderTopLeftRadius: 30,
-                  overflow: 'hidden',
-                }}>
-                <FlatList
-                  data={ComplaintData}
-                  keyExtractor={item => item.id}
-                  renderItem={({item}) => {
-                    return (
-                      <TouchableOpacity
-                        onPress={() => {
-                          console.log(item);
-                          setComplaintbtmsheet(false);
-                          setComplaint(item.CCMComplaintTypeName);
-                          setComplaintidpk(item.CCMComplaintTypeIDPK);
-                        }}
-                        style={{
-                          padding: 15,
-                          borderBottomWidth: 0.5,
-                          borderBottomColor: '#000000',
-                          backgroundColor: '#eaa3a3',
-                        }}>
-                        <Text
-                          style={{
-                            alignSelf: 'center',
-                            alignItems: 'flex-start',
-                            justifyContent: 'flex-start',
-                            color: 'black',
-                          }}>
-                          {item.CCMComplaintTypeName}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  }}
-                />
-              </TouchableOpacity>
-            </View>
-          </Modal>
-
-          {/* Natural Data */}
-
-          <Modal
-            visible={Naturalbtmsheet}
-            transparent={true}
-            animationType="slide">
-            <View style={{flex: 1}}>
-              <TouchableOpacity
-                onPress={() => {
-                  setNaturalbtmsheet(false);
-                }}
-                style={{flex: 0.5}}></TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  setNaturalbtmsheet(false);
-                }}
-                style={{
-                  flex: 0.5,
-                  backgroundColor: '#ffffff',
-                  borderTopRightRadius: 30,
-                  borderTopLeftRadius: 30,
-                  overflow: 'hidden',
-                }}>
-                <FlatList
-                  data={NaturalData}
-                  keyExtractor={item => item.id}
-                  renderItem={({item}) => {
-                    return (
-                      <TouchableOpacity
-                        onPress={() => {
-                          console.log(item);
-                          setNaturalbtmsheet(false);
-                          setNatural(item.ComplaintNatureName);
-                          setNaturalidpk(item.ComplaintNatureIDPK);
-                        }}
-                        style={{
-                          padding: 15,
-                          borderBottomWidth: 0.5,
-                          borderBottomColor: '#000000',
-                          backgroundColor: '#eaa3a3',
-                        }}>
-                        <Text
-                          style={{
-                            alignSelf: 'center',
-                            alignItems: 'flex-start',
-                            justifyContent: 'flex-start',
-                            color: 'black',
-                          }}>
-                          {item.ComplaintNatureName}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  }}
-                />
-              </TouchableOpacity>
-            </View>
-          </Modal>
-
-          {/*  DIVISION*/}
-
-          <Modal
-            visible={Divisionbtmsheet}
-            transparent={true}
-            animationType="slide">
-            <View style={{flex: 1}}>
-              <TouchableOpacity
-                onPress={() => {
-                  setDivisionbtmsheet(false);
-                }}
-                style={{flex: 0.5}}></TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  setDivisionbtmsheet(false);
-                }}
-                style={{
-                  flex: 0.5,
-                  backgroundColor: '#ffffff',
-                  borderTopRightRadius: 30,
-                  borderTopLeftRadius: 30,
-                  overflow: 'hidden',
-                }}>
-                <FlatList
-                  data={DivisionData}
-                  keyExtractor={item => item.id}
-                  renderItem={({item}) => {
-                    return (
-                      <TouchableOpacity
-                        onPress={() => {
-                          console.log(item);
-                          setDivisionbtmsheet(false);
-                          setDivision(item.DivisionName);
-                          setDivisionidpk(item.ContractIDPK);
-                        }}
-                        style={{
-                          padding: 15,
-                          borderBottomWidth: 0.5,
-                          borderBottomColor: '#000000',
-                          backgroundColor: '#eaa3a3',
-                        }}>
-                        <Text
-                          style={{
-                            alignSelf: 'center',
-                            alignItems: 'flex-start',
-                            justifyContent: 'flex-start',
-                            color: 'black',
-                          }}>
-                          {item.DivisionName}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  }}
-                />
-              </TouchableOpacity>
-            </View>
-          </Modal>
-
-          {/* Priority */}
-          <Modal
-            visible={Prioritybtmsheet}
-            transparent={true}
-            animationType="slide">
-            <View style={{flex: 1}}>
-              <TouchableOpacity
-                onPress={() => {
-                  setPrioritybtmsheet(false);
-                }}
-                style={{flex: 0.5}}></TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  setPrioritybtmsheet(false);
-                }}
-                style={{
-                  flex: 0.5,
-                  backgroundColor: '#ffffff',
-                  borderTopRightRadius: 30,
-                  borderTopLeftRadius: 30,
-                  overflow: 'hidden',
-                }}>
-                <FlatList
-                  data={PriorityData}
-                  keyExtractor={item => item.id}
-                  renderItem={({item}) => {
-                    return (
-                      <TouchableOpacity
-                        onPress={() => {
-                          console.log(item);
-                          setPrioritybtmsheet(false);
-                          setPriority(item.PriorityName);
-                          setPriorityidpk(item.PriorityIDPK);
-                        }}
-                        style={{
-                          padding: 15,
-                          borderBottomWidth: 0.5,
-                          borderBottomColor: '#000000',
-                          backgroundColor: '#eaa3a3',
-                        }}>
-                        <Text
-                          style={{
-                            alignSelf: 'center',
-                            alignItems: 'flex-start',
-                            justifyContent: 'flex-start',
-                            color: 'black',
-                          }}>
-                          {item.PriorityName}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  }}
-                />
-              </TouchableOpacity>
-            </View>
-          </Modal>
-
-          {/* Discipline */}
-<Modal visible={Disciplinebtmsheet} transparent={true} animationType="slide">
-  <View style={{flex: 1}}>
-    <TouchableOpacity
-      onPress={() => setDisciplinebtmsheet(false)}
-      style={{flex: 0.5}}
-    />
-    <View
-      style={{
-        flex: 0.5,
-        backgroundColor: '#ffffff',
-        borderTopRightRadius: 30,
-        borderTopLeftRadius: 30,
-        overflow: 'hidden',
-        paddingTop: 10,
-        // width:'100%'
-      }}
-    >
-        <View style={{width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center',}}>
-          <Text style={{color:'black',width:'90%',borderBottomWidth:1,  borderBottomColor: '#dedddd',}} >Discipline</Text>
-        </View>
-      {/* Custom Search Bar */}
-      <View
-        style={{
-          width: '80%',
-          // elevation: 10,
-          borderRadius: 20,
-          backgroundColor: '#ffffff',
-          height: 40,
-          marginTop:25,
-          borderWidth:1,
-          borderColor:'#b7b5b5',
-          flexDirection: 'row',
-          alignSelf: 'center',
-          justifyContent: 'center',
-          alignItems: 'center',
-          
-        }}
-      >
-      
-        <View
-          style={{
-            width: '10%',
-            height: 30,
-            justifyContent: 'center',
-            alignItems: 'center',
-            alignSelf: 'center',
-          }}
-        >
-          <EvilIcons name="search" color="#003cff" size={30} />
-        </View>
-        <TextInput
-          style={{
-            width: '75%',
-            height: 40,
-            color: '#000000',
-            fontSize: 17,
-            alignItems: 'center',
-            alignSelf: 'center',
-            justifyContent: 'center',
-          }}
-          placeholder="Search..."
-          placeholderTextColor="#7d7d7f"
-          value={searchText}
-          onChangeText={text => setSearchText(text)}
-        />
-      </View>
-
-      {/* Filtered FlatList */}
-      <FlatList
-        data={DisciplineData.filter(item =>
-          item.DisciplineName.toLowerCase().includes(searchText.toLowerCase())
-        )}
-        keyExtractor={item => item.id}
-        renderItem={({item}) => (
-          <TouchableOpacity
-            onPress={() => {
-              setDisciplinebtmsheet(false);
-              setDiscipline(item.DisciplineName);
-              setDisciplineidpk(item.DisciplineIDPK);
-            }}
-            style={{
-              width:'90%',
-              alignItems:'flex-start',
-              justifyContent:'center',
-              alignSelf:'center',
-              padding: 15,
-              borderBottomWidth: 0.5,
-              borderBottomColor: '#000000',
-              backgroundColor: '#ffffff',
-            }}
-          >
-            <Text style={{color: 'black',}}>{item.DisciplineName}</Text>
-          </TouchableOpacity>
-        )}
-      />
-    </View>
-  </View>
-</Modal>
-
-          <View
-            style={{
-              width: '90%',
-              height: 40,
-              justifyContent: 'center',
-              alignSelf: 'center',
-              marginTop:20,
-            }}>
-            <Button title="Submit" onPress={handlePress} />
-          </View>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+</View>
   );
-};
+}
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+  },
+  image: {
+    width: 150,
+    height: 150,
+    borderRadius: 100,
+    alignSelf: 'center',
+    marginBottom: 50,
+  },
+  title: {
+    fontSize: 24,
+    textAlign: 'center',
+    marginBottom: 50,
+    fontWeight: 'bold',
 
-export default RegisterTicket;
+  },
+  input: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    paddingHorizontal: 15,
+    marginBottom: 8,
+    color:'#0073ff',
+    borderRadius: 5,
+  },
+});
 
-const styles = StyleSheet.create({});
+/* sharuk /
+/ 123456 */
+
+Show more
+Login.js
+JS4KB
+	
+vignesh
+5:42 PM
+https://claude.ai/public/artifacts/233ac318-8827-4c6b-8c51-5cdcea4b3dc6
+
+	
+vignesh
+5:51 PM
+Login.js
+JS3KB
+Tue, Jun 17, 2025
+	
+vignesh
+10:55 AM
+ <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+
+Yesterday
+	
+afsal
+12:25 PM
+vignesh annaw mobile tharigala emulator run agamattikuthu tab la design change aguthu 
+
+	
+vignesh
+2:45 PM
+http://13.127.67.252:5040/ReachAnaProcess/
 
 
+{
+    "data": {
+        "p1": null,
+        "p2": "1104",
+        "p3": "1",
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null,
+        "p8": null,
+        "p9": null,
+        "p10": null,
+        "PageIndex_int": 1,
+        "PageSize_int": 10,
+        "Type_varchar": "ANALYSISDETAILSALL",
+        "UserGroupKey": "2112",
+        "UserAccessKey": "124"
+    }
+}
+Today
+	
+afsal
+12:31 PM
+anna
+
+sathiyama therile ethu nu 
+
+konjo help pannuge
+
+	
+vignesh
+12:32 PM
+No need to worry
+
+u have already done this 
+
+	
+afsal
+12:32 PM
+first anta design panni muduchurre
+
+	
+vignesh
+12:32 PM
+with static data
+
+so its simple 
+
+first design and ask me 
+
+	
+afsal
+12:32 PM
+thank you
+
+	
+vignesh
+12:34 PM
+thunder-collection_Reach Pro.json
+JSON1KB
+	
+afsal
+3:51 PM
+anna
+
+	
+vignesh
+3:52 PM
+Try panu
+
+after 4 
+
+we will try 
+
+4.20
+
+	
+afsal
+5:12 PM
+Vignesh anna pathukala pathukala
+
+Write to vignesh
+
+No file chosen
+
+Help
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Reach Pro",
+    "collectionId": "e4cc26d9-7868-407f-82f7-0393c3b0719c",
+    "dateExported": "2025-06-19T07:04:37.429Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "daea17ce-db58-4938-b777-1f17ffaf75a4",
+            "colId": "e4cc26d9-7868-407f-82f7-0393c3b0719c",
+            "containerId": "",
+            "name": "Reach - Analysis API Call",
+            "url": "http://13.127.67.252:5040/ReachAnaProcess/",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2025-06-19T07:03:40.105Z",
+            "modified": "2025-06-19T07:03:40.105Z",
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "\"L"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"data\": {\n        \"p1\": null,\n        \"p2\": \"1104\",\n        \"p3\": \"1\",\n        \"p4\": null,\n        \"p5\": null,\n        \"p6\": null,\n        \"p7\": null,\n        \"p8\": null,\n        \"p9\": null,\n        \"p10\": null,\n        \"PageIndex_int\": 1,\n        \"PageSize_int\": 10,\n        \"Type_varchar\": \"ANALYSISDETAILSALL\",\n        \"UserGroupKey\": \"2112\",\n        \"UserAccessKey\": \"124\"\n    }\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "g_5iIUl3F0eWMTErZCE5aYFexURBsamHbmmtUJkTkc5nIkM8xacxZ3VLZ1IL1u_ZCS7s-LIjm_KzXMBSrKqU5g"
+}
+File 1 of 1
+Download
