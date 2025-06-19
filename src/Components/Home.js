@@ -26,7 +26,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome5';
 import Feather from 'react-native-vector-icons/Feather';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import home_images from '../assets/image/building_15218830.png';
-import {responsiveWidth,responsiveHeight} from './Responsive';
+import {responsiveWidth,responsiveHeight,Commonheight} from './Responsive';
 import slidebars from '../assets/image/SideDrawer.png';
 
 export default function Home({navigation}) {
@@ -181,7 +181,7 @@ export default function Home({navigation}) {
           style={{
             width: responsiveWidth(95),
                 paddingHorizontal: 15,
-            height: 130,
+            height: responsiveHeight(14),
             backgroundColor: '#007aff',
             alignSelf: 'center',
             alignItems: 'center',
@@ -195,7 +195,7 @@ export default function Home({navigation}) {
           <View
             style={{
               width: '60%',
-
+        
               justifyContent: 'center',
               alignSelf: 'center',
               alignItems: 'flex-start',
@@ -406,7 +406,7 @@ const ModuleBox = ({label, count, navigation, image}) => {
     }}
     style={[
       styles.moduleBox,
-      {height: 110, alignSelf: 'center', justifyContent: 'center'},
+      {height: responsiveHeight(11), alignSelf: 'center', justifyContent: 'center'},
     ]}>
     <View
       style={{
@@ -480,7 +480,7 @@ const ModuleBox = ({label, count, navigation, image}) => {
           justifyContent: 'center',
           alignItems: 'center',
           alignSelf: 'center',
-          bottom:8
+           bottom: Commonheight(14)
         }}>
         {image && <Image source={image} style={{width: 40, height: 40}} />}
       </View>
@@ -495,7 +495,7 @@ const ToolBox = ({label, image}) => (
     style={[
       styles.moduleBox,
       {
-        height: 100,
+        height: responsiveHeight(11),
         flexDirection: 'row',
         alignSelf: 'center',
         justifyContent: 'space-around',

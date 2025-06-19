@@ -1,7 +1,7 @@
 import { View, Text ,StyleSheet,Image,SafeAreaView,TouchableOpacity} from 'react-native'
 import React from 'react'
  import preventive from '../assets/image/Frame.png'
-  import breaks from '../assets/image/HomeRepair.png'
+  import breaks from '../assets/image/Fix.png'
 import {responsiveWidth,} from './Responsive';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
@@ -34,12 +34,12 @@ const Workorder = ({navigation}) => {
             style={{
               color: '#ffffff',
               fontWeight: '600',
-              fontSize: 18,
+              fontSize: 12,
             
               textAlign: 'center',
             }}
           >
-           Workorders (OPEN)
+           Workorders-(OPEN)
           </Text>
           </View>
         
@@ -48,12 +48,12 @@ const Workorder = ({navigation}) => {
         
              </View>
     <View style={{width:'100%',  alignItems:'center',alignSelf:'center',justifyContent:'center',}}>
-      <View style={{width:'90%', height:50, flexDirection:'row', alignItems:'center',alignSelf:'center',justifyContent:'center'}}>
-     <View style={{width:'30%',  alignItems:'center',justifyContent:'center',alignSelf:'center' }}>
-      <Text style={{color: '#656363',fontSize:14}}>Type</Text>
+      <View style={{width:'95%', height:50, flexDirection:'row', alignItems:'center',alignSelf:'center',justifyContent:'center'}}>
+     <View style={{width:'30%', flexDirection:'row',  alignItems:'center',justifyContent:'center',alignSelf:'center' }}>
+      <Text style={{color: '#656363',fontSize:14,textAlign:'left',right:19}}>Type</Text>
     </View>
       <View style={{width:"20%",   alignItems:'center',justifyContent:'center',alignSelf:'center' }}>
-      <Text style={{color: '#656363',fontSize:14}}>Current</Text>
+      <Text style={{color: '#656363',fontSize:14,}}>Current</Text>
     </View>
          <View style={{width:"20%", alignItems:'center',justifyContent:'center',alignSelf:'center'  }}>
       <Text style={{color: '#656363',fontSize:14}}>Past</Text>
@@ -65,31 +65,31 @@ const Workorder = ({navigation}) => {
 
 
   <View style={{width:'95%',backgroundColor:'#ffffff', flexDirection:'row', alignItems:'center',alignSelf:'center',justifyContent:'center',height:90,borderRadius:9}} >
-    <View style={{width:'30%',  flexDirection:'column', alignItems:'center',alignSelf:'center',}}>
+    <View style={{width:'31%',  flexDirection:'column', alignItems:'center',alignSelf:'center',justifyContent:'center',right:7,}}>
      <Image style={{width:30,height:30,alignSelf:'flex-start'}} source={preventive} />
      <Text style={{color:'#656363',right:4,}}>Preventive Maintenance</Text>
     </View>
-    <View style={{width:'19%',height:40,backgroundColor:'#90eb90',alignItems:'center',alignSelf:'center',justifyContent:'center',borderRadius:7}}>
-        <Text style={{color: '#0de10d',fontSize:12}}>0
-        </Text>
+    <View style={{width:'17%',height:42,backgroundColor:'#90eb90',alignItems:'center',alignSelf:'center',justifyContent:'center',borderRadius:5}}>
+        <Text style={{color: '#1ab71a',fontSize:12}}>0    
+            </Text>
         </View>
-        <View style={{width:5}} /> 
-      <View style={{width:'19%',height:40,backgroundColor:'#f79e9e',alignItems:'center',alignSelf:'center',justifyContent:'center',borderRadius:7}}>
+        <View style={{width:"3%"}} /> 
+      <View style={{width:'17%',height:42,backgroundColor:'#f79e9e',alignItems:'center',alignSelf:'center',justifyContent:'center',borderRadius:5}}>
         <Text style={{color:'#fc5050',fontSize:12}}>0
         </Text>
         </View>
-        <View style={{width:5}} /> 
-      <View style={{width:'19%',height:40,backgroundColor:'#a1d1fe',alignItems:'center',alignSelf:'center',justifyContent:'center',borderRadius:7}}>
+ <View style={{width:"3%"}} /> 
+      <View style={{width:'17%',height:42,backgroundColor:'#a1d1fe',alignItems:'center',alignSelf:'center',justifyContent:'center',borderRadius:5}}>
         <Text style={{color:'#3478ff',fontSize:12}}>0
         </Text>
         </View>
-        <View style={{width:5}} /> 
+ <View style={{width:"3%"}} /> 
   </View>
 
 
  <View style={{width:'90%', height:50, flexDirection:'row', alignItems:'center',alignSelf:'center',justifyContent:'center'}}>
      <View style={{width:'30%', alignItems:'center',justifyContent:'center',alignSelf:'center' }}>
-      <Text style={{color: '#656363',fontSize:14}}>Type</Text>
+      <Text style={{color: '#656363',fontSize:14,textAlign:'left',right:19}}>Type</Text>
     </View>
       <View style={{width:"30%",   alignItems:'center',justifyContent:'center',alignSelf:'center' }}>
       <Text style={{color: '#656363',fontSize:14}}>Analysis</Text>
@@ -111,9 +111,8 @@ const Workorder = ({navigation}) => {
   justifyContent: 'center',
   borderRadius: 9,
 }}>
-
-
-  <View style={{
+  
+ <View style={{
     width: '40%',
     flexDirection: 'column',
     alignItems: 'center',
@@ -126,27 +125,22 @@ const Workorder = ({navigation}) => {
     </Text>
   </View>
 
-
-
-  
   <TouchableOpacity  onPress={()=>{navigation.navigate("Analysis")}} style={{
-    width: '22%',
-    height: 40,
-    backgroundColor: '#90eb90',
+    width:'17%',height:42,
+    backgroundColor:'#90eb90',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 7,
   }}>
-    <Text style={{ color: '#0de10d', fontSize: 12 }}>0</Text>
+    <Text style={{ color: '#1ab71a', fontSize: 12 }}>0</Text>
   </TouchableOpacity>
 
 
-  <View style={{ width: 10 }} />
+  <View style={{ width: "10%" }} />
 
  
   <View style={{
-    width: '22%',
-    height: 40,
+    width:'17%',height:42,
     backgroundColor: '#a1d1fe',
     alignItems: 'center',
     justifyContent: 'center',
@@ -154,7 +148,7 @@ const Workorder = ({navigation}) => {
   }}>
     <Text style={{ color: '#3478ff', fontSize: 12 }}>0</Text>
   </View>
-
+  <View style={{ width: "10%" }} />
 </View>
 
     

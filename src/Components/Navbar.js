@@ -13,6 +13,7 @@ import  BottomSheet  from './BottomSheet';
 import BottomSheetcopy from './BottomSheet copy';
 import Workorder from './Workorder';
 import Analysis from './Analysis';
+
 // import Async_Methud from './Async_Methud';
 
 const Stack = createStackNavigator();
@@ -32,7 +33,8 @@ const Navigationfiles = () => {
          <Stack.Screen name='BottomSheet'   component={BottomSheet} options={{ headerShown: false }} />
            <Stack.Screen name='BottomSheetcopy'   component={BottomSheetcopy}/>
             <Stack.Screen name='Workorder'   component={Workorder}  options={{ headerShown: false }}/>
-                 <Stack.Screen name='Analysis'   component={Analysis}  options={{ headerShown: false }}/>
+         <Stack.Screen name='Analysis'   component={Analysis}  options={{ headerShown: false }}/>
+            
       </Stack.Navigator>
     </NavigationContainer>
   )
