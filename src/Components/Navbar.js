@@ -33,7 +33,7 @@ const Navigationfiles = () => {
          <Stack.Screen name='BottomSheet'   component={BottomSheet} options={{ headerShown: false }} />
            <Stack.Screen name='BottomSheetcopy'   component={BottomSheetcopy}/>
             <Stack.Screen name='Workorder'   component={Workorder}  options={{ headerShown: false }}/>
-         <Stack.Screen name='Analysis'   component={Analysis}  options={{ headerShown: false }}/>
+         <Stack.Screen name='Analysis'   component={Analysis}  options={{ headerShown: false }}  />
             
       </Stack.Navigator>
     </NavigationContainer>

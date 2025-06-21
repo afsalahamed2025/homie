@@ -809,8 +809,7 @@ Locality state kulla save pannudhu */
   return (
     <SafeAreaView style={{ flex: 1,
     width: responsiveWidth(100),}}>
-     
-     {/* Modal */}
+       {/* Modal */}
    {Contractbtmsheet && (
           <View style={{
             position:'absolute',
