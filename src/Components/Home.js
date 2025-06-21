@@ -399,7 +399,7 @@ const ModuleBox = ({label, count, navigation, image}) => {
         navigation.navigate('Workorder');
       }  else if (label === 'House Keeping Maintenance') {
         console.log('House Keeping Page');
-        navigation.navigate('BottomSheetcopy');
+        navigation.navigate('Break');
       } else {
         console.log('No match');
       }
